@@ -1,13 +1,14 @@
-import { Box, useColorModeValue } from '@chakra-ui/react'
-import React from 'react'
-import { NavBar } from '../components/NavBar'
+import { Box, useColorModeValue, Image } from '@chakra-ui/react';
+import React from 'react';
+import { NavBar } from '../components/NavBar';
+import { Hero } from '../components/Hero';
 
 export const Home = () => {
   return (
-    <Box minH="100vh" bg={useColorModeValue('gray.100', 'gray.900')} display='flex' flexDir='column' alignItems='center' justifyContent='center' >
-        <NavBar></NavBar>
-        <br />
-        <div>Home</div>
-    </Box>
-  )
-}
+    <>
+      <NavBar></NavBar>
+      <br />
+      <Hero></Hero>
+    </>
+  );
+};

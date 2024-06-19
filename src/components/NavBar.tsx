@@ -1,7 +1,16 @@
-import { Box, Container, useColorModeValue } from '@chakra-ui/react';
+import { MoonIcon, SunIcon } from '@chakra-ui/icons';
+import {
+  Box,
+  Button,
+  Container,
+  useColorMode,
+  useColorModeValue,
+} from '@chakra-ui/react';
 import React from 'react';
 
 export const NavBar = () => {
+  const { colorMode, toggleColorMode } = useColorMode();
+
   return (
     <Box
       position="fixed"
@@ -17,7 +26,12 @@ export const NavBar = () => {
         justifyContent="space-between"
       >
         <div>NavBar</div>
-        <div>Navbar</div>
+        <Button
+          onClick={toggleColorMode}
+          bg={useColorModeValue('white', 'black')}
+        >
+          {colorMode === 'light' ? <MoonIcon /> : <SunIcon />}
+        </Button>
       </Container>
     </Box>
   );
