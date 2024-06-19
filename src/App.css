@@ -1,11 +1,11 @@
-
-
+.blueText {
+  color: rgb(61, 106, 255);
+}
 /* @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
   }
 } */
-
 
 /* @keyframes App-logo-spin {
   from {

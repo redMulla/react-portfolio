@@ -3,6 +3,7 @@ import {
   Box,
   Button,
   Container,
+  Text,
   useColorMode,
   useColorModeValue,
 } from '@chakra-ui/react';
@@ -25,7 +26,9 @@ export const NavBar = () => {
         display="flex"
         justifyContent="space-between"
       >
-        <div>NavBar</div>
+        <Text fontSize="xl" className="blueText" fontWeight="bold">
+          My Portfolio
+        </Text>
         <Button
           onClick={toggleColorMode}
           bg={useColorModeValue('white', 'black')}
