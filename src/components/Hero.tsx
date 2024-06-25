@@ -15,11 +15,15 @@ export const Hero = () => {
 
   useEffect(() => {
     const typed = new Typed(el.current, {
-      strings: ["I'm a frontend developer", "I'm a backend developer"],
-      typeSpeed: 60,
+      strings: [
+        "I'm a Frontend developer",
+        "I'm a Backend developer",
+        "I'm a FullStack developer",
+      ],
+      typeSpeed: 90,
       loop: true,
       loopCount: Infinity,
-      cursorChar: '>',
+      cursorChar: '/>',
     });
     return () => {
       typed.destroy();
@@ -27,35 +31,37 @@ export const Hero = () => {
   }, []);
 
   return (
-    <Container maxW="container.xl" pt="10" mt="8">
-      <Grid
-        h="80%"
-        templateRows="repeat(2, 1fr)"
-        templateColumns="repeat(6,1fr)"
-        gap={4}
-      >
-        <GridItem
-          rowSpan={2}
-          colSpan={4}
-          display="flex"
-          // alignItems="center"
-          justifyContent="center"
-          flexDir="column"
+    <Box bg="var(--chakra-colors-chakra-body-bg)" minH="80vh" py="10">
+      <Container maxW="container.xl" pt="10" mt="8">
+        <Grid
+          h="80%"
+          templateRows="repeat(2, 1fr)"
+          templateColumns="repeat(6,1fr)"
+          gap={4}
         >
-          <Heading as="h1" size="3xl" textAlign="center">
-            Vassilly <b className="blueText">Ibinkwiye:</b> Full-Stack Web
-            Developer
-          </Heading>
-          <Text fontSize="3xl" pt="4" pl="4">
-            Hello, <span className="blueText" ref={el} />{' '}
-          </Text>
-        </GridItem>
-        <GridItem rowSpan={2} colSpan={2}>
-          <Box pt="7">
-            <Image src="./images/Hand coding-amico.svg" />
-          </Box>
-        </GridItem>
-      </Grid>
-    </Container>
+          <GridItem
+            rowSpan={2}
+            colSpan={4}
+            display="flex"
+            // alignItems="center"
+            justifyContent="center"
+            flexDir="column"
+          >
+            <Heading as="h1" size="3xl" textAlign="center">
+              Vassilly <b className="blueText">Ibinkwiye:</b> Full-Stack Web
+              Developer
+            </Heading>
+            <Text fontSize="3xl" pt="4" pl="4">
+              &lt;Hello, <span className="blueText" ref={el} />{' '}
+            </Text>
+          </GridItem>
+          <GridItem rowSpan={2} colSpan={2}>
+            <Box pt="7">
+              <Image src="./images/Hand coding-amico.svg" />
+            </Box>
+          </GridItem>
+        </Grid>
+      </Container>
+    </Box>
   );
 };

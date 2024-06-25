@@ -17,9 +17,10 @@ export const NavBar = () => {
       position="fixed"
       top="0"
       p="10px"
-      bg={useColorModeValue('white', 'black')}
+      bg={useColorModeValue('gray.100', 'black')}
       width="100vw"
       py="20px"
+      boxShadow="xl"
     >
       <Container
         maxW="container.xl"
@@ -31,7 +32,7 @@ export const NavBar = () => {
         </Text>
         <Button
           onClick={toggleColorMode}
-          bg={useColorModeValue('white', 'black')}
+          bg={useColorModeValue('gray.100', 'black')}
         >
           {colorMode === 'light' ? <MoonIcon /> : <SunIcon />}
         </Button>

@@ -2,6 +2,7 @@ import { Box, useColorModeValue, Image } from '@chakra-ui/react';
 import React from 'react';
 import { NavBar } from '../components/NavBar';
 import { Hero } from '../components/Hero';
+import MatrixBackground from '../components/Matrix';
 
 export const Home = () => {
   return (
@@ -9,6 +10,9 @@ export const Home = () => {
       <NavBar></NavBar>
       <br />
       <Hero></Hero>
+      <Box h={'100vh'}>
+        <MatrixBackground></MatrixBackground>
+      </Box>
     </>
   );
 };
