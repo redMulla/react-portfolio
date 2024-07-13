@@ -9,6 +9,7 @@ import {
 } from '@chakra-ui/react';
 import React, { useEffect, useRef } from 'react';
 import Typed from 'typed.js';
+// import { Keyboard3d } from './Keyboard3d';
 
 export const Hero = () => {
   const el = useRef(null);
@@ -16,9 +17,9 @@ export const Hero = () => {
   useEffect(() => {
     const typed = new Typed(el.current, {
       strings: [
-        "I'm a Frontend developer",
-        "I'm a Backend developer",
-        "I'm a FullStack developer",
+        "Ideas into Reality",
+        "Dreams into Websites",
+        "Challenges into Success",
       ],
       typeSpeed: 90,
       loop: true,
@@ -52,13 +53,14 @@ export const Hero = () => {
               Developer
             </Heading>
             <Text fontSize="3xl" pt="4" pl="4">
-              &lt;Hello, <span className="blueText" ref={el} />{' '}
+              &lt;Turn <span className="blueText" ref={el} />{' '}
             </Text>
           </GridItem>
           <GridItem rowSpan={2} colSpan={2}>
             <Box pt="7">
               <Image src="./images/Hand coding-amico.svg" />
             </Box>
+            {/* <Keyboard3d></Keyboard3d> */}
           </GridItem>
         </Grid>
       </Container>

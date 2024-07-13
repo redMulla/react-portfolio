@@ -27,7 +27,7 @@ export const NavBar = () => {
         display="flex"
         justifyContent="space-between"
       >
-        <Text fontSize="xl" className="blueText" fontWeight="bold">
+        <Text fontSize="2xl" className="blueText" fontWeight="bold">
           My Portfolio
         </Text>
         <Button
