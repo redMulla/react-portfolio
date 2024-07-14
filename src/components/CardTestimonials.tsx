@@ -17,7 +17,7 @@ export const CardTestimonials = () => {
         </Box>
         <Heading margin={'5'}  fontSize={'md'} fontWeight={'500'} >Ibinkwiye Vassilly delivered a fantastic full-stack web service for us. They were responsive, efficient, and the final product is excellent. Highly recommend!"</Heading>
         <Text justifySelf={'center'} textColor={'GrayText'} mb={'3'}>- John Doe</Text>
-        <Box position={'absolute'} bottom={'-13px'} bg={'var(--chakra-colors-chakra-body-bg)'} px={'2'} borderRadius={'10px'} border={'1px'}>
+        <Box position={'absolute'} bottom={'-13px'} bg={'var(--chakra-colors-chakra-body-bg)'} px={'2'} borderRadius={'10px'} border={'2px'}>
           <FontAwesomeIcon icon={faStarSolid} />
           <FontAwesomeIcon icon={faStarSolid} />
           <FontAwesomeIcon icon={faStarSolid} />
