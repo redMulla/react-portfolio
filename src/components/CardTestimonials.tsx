@@ -6,7 +6,7 @@ import Skeleton from 'react-loading-skeleton';
 export const CardTestimonials = () => {
   
   return (
-    <Box w="sm"  bg={useColorModeValue('blue.100', 'blue.900')} borderRadius={'15px'} display={'flex'}flexDir={'column'} justifyContent={"center"} alignItems={'center'} paddingTop={'3'} paddingBottom={'3'}>
+    <Box w="sm"  bg={useColorModeValue('gray.100', 'blue.900')} border={'2px solid'} borderColor={'cyan'} borderRadius={'15px'} display={'flex'}flexDir={'column'} justifyContent={"center"} alignItems={'center'} paddingTop={'3'} paddingBottom={'3'}>
         {/* Avatar */}
         <Box height={'80px'} minH={'0px'} width={'80px'} minW={"60px"} borderRadius={'50%'}  overflow={'hidden'} margin={'3'} border={'1px solid'}>
           {/* <Skeleton height={'60px'} width={'100%'} count={6}/> */}

@@ -4,6 +4,7 @@ import { NavBar } from '../components/NavBar';
 import { Hero } from '../components/Hero';
 import MatrixBackground from '../components/Matrix';
 import { CardTestimonials } from '../components/CardTestimonials';
+import { Skills } from '../components/Skills';
 
 export const Home = () => {
   return (
@@ -16,6 +17,7 @@ export const Home = () => {
       <CardTestimonials></CardTestimonials>
       <CardTestimonials></CardTestimonials>
       </Container>
+      <Skills></Skills>
       <Box>
         <MatrixBackground></MatrixBackground>
       </Box>

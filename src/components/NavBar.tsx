@@ -21,6 +21,7 @@ export const NavBar = () => {
       width="100vw"
       py="20px"
       boxShadow="xl"
+      zIndex={'4'}
     >
       <Container
         maxW="container.xl"
