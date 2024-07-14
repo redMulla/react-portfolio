@@ -1,8 +1,9 @@
-import { Box, useColorModeValue, Image } from '@chakra-ui/react';
+import { Box, useColorModeValue, Image, Container } from '@chakra-ui/react';
 import React from 'react';
 import { NavBar } from '../components/NavBar';
 import { Hero } from '../components/Hero';
 import MatrixBackground from '../components/Matrix';
+import { CardTestimonials } from '../components/CardTestimonials';
 
 export const Home = () => {
   return (
@@ -10,7 +11,12 @@ export const Home = () => {
       <NavBar></NavBar>
       <br />
       <Hero></Hero>
-      <Box h={'100vh'}>
+      <Container maxW={'container.xl'} display={'flex'} justifyContent={'space-between'} paddingTop={'20'} paddingBottom={'20'}>
+      <CardTestimonials></CardTestimonials>
+      <CardTestimonials></CardTestimonials>
+      <CardTestimonials></CardTestimonials>
+      </Container>
+      <Box>
         <MatrixBackground></MatrixBackground>
       </Box>
     </>
