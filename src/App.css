@@ -1,6 +1,14 @@
 .blueText {
   color: rgb(61, 106, 255);
 }
+
+.icons {
+  font-size: 3em;
+}
+
+.rate{
+  font-size: 1.5em;
+}
 /* @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
