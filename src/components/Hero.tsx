@@ -9,6 +9,8 @@ import {
 } from '@chakra-ui/react';
 import React, { useEffect, useRef } from 'react';
 import Typed from 'typed.js';
+import Lottie from 'lottie-react';
+import animationData from '../assets/code.json';
 // import { Keyboard3d } from './Keyboard3d';
 
 export const Hero = () => {
@@ -17,9 +19,9 @@ export const Hero = () => {
   useEffect(() => {
     const typed = new Typed(el.current, {
       strings: [
-        "Ideas into Reality",
-        "Dreams into Websites",
-        "Challenges into Success",
+        'Ideas into Reality',
+        'Dreams into Websites',
+        'Challenges into Success',
       ],
       typeSpeed: 90,
       loop: true,
@@ -58,7 +60,12 @@ export const Hero = () => {
           </GridItem>
           <GridItem rowSpan={2} colSpan={2}>
             <Box pt="7">
-              <Image src="./images/Hand coding-amico.svg" />
+              {/* <Image src="./images/Hand coding-amico.svg" /> */}
+              <Lottie
+                animationData={animationData}
+                loop={true}
+                autoplay={true}
+              />
             </Box>
             {/* <Keyboard3d></Keyboard3d> */}
           </GridItem>
