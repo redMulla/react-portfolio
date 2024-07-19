@@ -11,6 +11,7 @@ import React, { useEffect, useRef } from 'react';
 import Typed from 'typed.js';
 import Lottie from 'lottie-react';
 import animationData from '../assets/code.json';
+import { Zoom } from 'react-awesome-reveal';
 // import { Keyboard3d } from './Keyboard3d';
 
 export const Hero = () => {
@@ -50,10 +51,12 @@ export const Hero = () => {
             justifyContent="center"
             flexDir="column"
           >
-            <Heading as="h1" size="3xl" textAlign="center">
-              Vassilly <b className="blueText">Ibinkwiye:</b> Full-Stack Web
-              Developer
-            </Heading>
+            <Zoom fraction={1} triggerOnce={true} delay={20}>
+              <Heading as="h1" size="3xl" textAlign="center">
+                Vassilly <b className="blueText">Ibinkwiye:</b> Full-Stack Web
+                Developer
+              </Heading>
+            </Zoom>
             <Text fontSize="3xl" pt="4" pl="4">
               &lt;Turn <span className="blueText" ref={el} />{' '}
             </Text>
@@ -61,11 +64,13 @@ export const Hero = () => {
           <GridItem rowSpan={2} colSpan={2}>
             <Box pt="7">
               {/* <Image src="./images/Hand coding-amico.svg" /> */}
-              <Lottie
-                animationData={animationData}
-                loop={true}
-                autoplay={true}
-              />
+              <Zoom direction="left" triggerOnce={true} delay={200}>
+                <Lottie
+                  animationData={animationData}
+                  loop={true}
+                  autoplay={true}
+                />
+              </Zoom>
             </Box>
             {/* <Keyboard3d></Keyboard3d> */}
           </GridItem>

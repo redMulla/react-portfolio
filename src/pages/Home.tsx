@@ -5,6 +5,7 @@ import { Hero } from '../components/Hero';
 import MatrixBackground from '../components/Matrix';
 import { CardTestimonials } from '../components/CardTestimonials';
 import { Skills } from '../components/Skills';
+import { Fade } from 'react-awesome-reveal';
 
 export const Home = () => {
   return (
@@ -12,10 +13,27 @@ export const Home = () => {
       <NavBar></NavBar>
       <br />
       <Hero></Hero>
-      <Container maxW={'container.xl'} display={'flex'} justifyContent={'space-between'} paddingTop={'20'} paddingBottom={'20'}>
-      <CardTestimonials></CardTestimonials>
-      <CardTestimonials></CardTestimonials>
-      <CardTestimonials></CardTestimonials>
+      <Container
+        maxW={'container.xl'}
+        display={'flex'}
+        flexWrap={'wrap'}
+        w={'100%'}
+        justifyContent={'center'}
+        alignItems={'center'}
+        gap={{ base: '50px', sm: 5 }}
+        alignSelf={'center'}
+        paddingTop={'20'}
+        paddingBottom={'20'}
+      >
+        <Fade direction={'up'} fraction={1} triggerOnce={true}>
+          <CardTestimonials></CardTestimonials>
+        </Fade>
+        <Fade direction="down" fraction={1} triggerOnce={true}>
+          <CardTestimonials></CardTestimonials>
+        </Fade>
+        <Fade direction="up" fraction={1} triggerOnce={true}>
+          <CardTestimonials></CardTestimonials>
+        </Fade>
       </Container>
       <Skills></Skills>
       <Box>

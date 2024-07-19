@@ -9,7 +9,7 @@ import { faStar as faStarRegular } from '@fortawesome/free-regular-svg-icons';
 export const CardTestimonials = () => {
   return (
     <Box
-      w="sm"
+      w={{ sm: 'sm' }}
       bg={useColorModeValue('gray.100', 'black')}
       border={'4px solid'}
       position={'relative'}
@@ -17,6 +17,7 @@ export const CardTestimonials = () => {
       borderColor={'green'}
       display={'flex'}
       flexDir={'column'}
+      alignSelf={'center'}
       justifyContent={'center'}
       alignItems={'center'}
       paddingTop={'3'}
@@ -25,7 +26,6 @@ export const CardTestimonials = () => {
       {/* Avatar */}
       <Box
         height={'80px'}
-        minH={'0px'}
         width={'80px'}
         minW={'60px'}
         borderRadius={'50%'}

@@ -20,7 +20,8 @@ export const NavBar = () => {
       bg={useColorModeValue('gray.100', 'black')}
       width="100vw"
       py="20px"
-      boxShadow="xl"
+      // boxShadow="xl"
+      borderBottom="2px"
       zIndex={'4'}
     >
       <Container
