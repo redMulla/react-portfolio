@@ -50,7 +50,7 @@ export const Skills = () => {
               right={'0'}
               mb={'5'}
             />
-            <Heading fontSize={'3xl'} mb={'3'} textAlign={'center'}>
+            <Heading as={'h3'} fontSize={'3xl'} mb={'3'} textAlign={'center'}>
               Commitment to Quality and Integrity
             </Heading>
             <Flex alignItems={'center'} w={'100%'} justifyContent={'center'}>
@@ -84,7 +84,18 @@ export const Skills = () => {
             rendererSettings={{ preserveAspectRatio: 'xMidYMid meet' }}
           />
         </Box>
-        <Slider></Slider>
+        <Box>
+          <Heading
+            as={'h3'}
+            fontSize={'4xl'}
+            textAlign={'center'}
+            mb={'5'}
+            className="blueText"
+          >
+            Skills
+          </Heading>
+          <Slider></Slider>
+        </Box>
       </Container>
     </Box>
   );
