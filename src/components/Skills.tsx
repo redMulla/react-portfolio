@@ -1,8 +1,10 @@
+import React from 'react';
 import { Box, Container, Flex, Heading, Image, Text } from '@chakra-ui/react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faStar } from '@fortawesome/free-solid-svg-icons';
-import { faStar as faStarRegular } from '@fortawesome/free-regular-svg-icons';
-import React from 'react';
+// import { faStar as faStarRegular } from '@fortawesome/free-regular-svg-icons';
+import Lottie from 'lottie-react';
+import phoneAnimation from '../assets/mobile.json';
 
 export const Skills = () => {
   return (
@@ -15,22 +17,39 @@ export const Skills = () => {
           paddingTop={'10'}
           paddingBottom={'6'}
         >
-          <Heading justifySelf={'center'} className="blueText" fontSize={'4xl'}>
+          <Heading textAlign={'center'} className="blueText" fontSize={'4xl'}>
             {' '}
             A Foundation For Building Innovative Web Experiences.
           </Heading>
         </Box>
         <Flex flexDir={'row'} mt={'50px'} alignItems={'center'}>
-          <Image src="./images/lapii.svg" maxH={'400px'} />
+          <Image
+            src="./images/lapii.svg"
+            maxH={{ md: '200px', lg: '300px', xl: '400px' }}
+            display={{ base: 'none', md: 'block' }}
+          />
+
           <Box
             display={'flex'}
             justifyContent={'center'}
             flexDir={'column'}
             h="100%"
             w={'100%'}
+            zIndex={'1'}
             alignItems={'center'}
           >
-            <Heading fontSize={'3xl'} mb={'3'}>
+            <Image
+              src="./images/lapii.svg"
+              maxH={{ base: '200px', md: '', lg: '300px', xl: '400px' }}
+              // position={'absolute'}
+              display={{ base: 'block', md: 'none' }}
+              ml={'auto'}
+              mr={'auto'}
+              left={'0'}
+              right={'0'}
+              mb={'5'}
+            />
+            <Heading fontSize={'3xl'} mb={'3'} textAlign={'center'}>
               Commitment to Quality and Integrity
             </Heading>
             <Flex alignItems={'center'} w={'100%'} justifyContent={'center'}>
@@ -56,6 +75,14 @@ export const Skills = () => {
             </Flex>
           </Box>
         </Flex>
+        <Box maxW={'600px'} m={'auto'}>
+          <Lottie
+            animationData={phoneAnimation}
+            loop={true}
+            autoplay={true}
+            rendererSettings={{ preserveAspectRatio: 'xMidYMid meet' }}
+          />
+        </Box>
       </Container>
     </Box>
   );

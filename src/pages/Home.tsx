@@ -14,7 +14,7 @@ export const Home = () => {
       <br />
       <Hero></Hero>
       <Container
-        maxW={'container.xl'}
+        maxW={'container.2xl'}
         display={'flex'}
         flexWrap={'wrap'}
         w={'100%'}
