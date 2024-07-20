@@ -38,10 +38,11 @@ export const Hero = () => {
     <Box bg="var(--chakra-colors-chakra-body-bg)" minH="80vh" py="10">
       <Container maxW="container.xl" pt="10" mt="8">
         <Grid
-          h="80%"
+          h={{ base: '100%', sm: '80%' }}
           templateRows="repeat(2, 1fr)"
           templateColumns="repeat(6,1fr)"
           gap={4}
+          display={{ base: 'flex', md: 'grid' }}
         >
           <GridItem
             rowSpan={2}
@@ -51,17 +52,40 @@ export const Hero = () => {
             justifyContent="center"
             flexDir="column"
           >
+            <Box
+              pt="7"
+              m={'auto'}
+              display={{ base: 'block', md: 'none' }}
+              maxW={{ base: '230px', sm: '300px' }}
+            >
+              <Zoom direction="left" triggerOnce={true} delay={200}>
+                <Lottie
+                  animationData={animationData}
+                  loop={true}
+                  autoplay={true}
+                  rendererSettings={{ preserveAspectRatio: 'xMidYMid meet' }}
+                />
+              </Zoom>
+            </Box>
             <Zoom fraction={1} triggerOnce={true} delay={20}>
-              <Heading as="h1" size="3xl" textAlign="center">
+              <Heading
+                as="h1"
+                size={{ base: '2xl', sm: '3xl' }}
+                textAlign="center"
+              >
                 Vassilly <b className="blueText">Ibinkwiye:</b> Full-Stack Web
                 Developer
               </Heading>
             </Zoom>
-            <Text fontSize="3xl" pt="4" pl="4">
+            <Text fontSize={{ base: '2xl', sm: '3xl' }} pt="4" pl="4">
               &lt;Turn <span className="blueText" ref={el} />{' '}
             </Text>
           </GridItem>
-          <GridItem rowSpan={2} colSpan={2}>
+          <GridItem
+            rowSpan={2}
+            colSpan={2}
+            display={{ base: 'none', md: 'block' }}
+          >
             <Box pt="7">
               {/* <Image src="./images/Hand coding-amico.svg" /> */}
               <Zoom direction="left" triggerOnce={true} delay={200}>
