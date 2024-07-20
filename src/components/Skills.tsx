@@ -1,14 +1,15 @@
 import React from 'react';
 import { Box, Container, Flex, Heading, Image, Text } from '@chakra-ui/react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faStar } from '@fortawesome/free-solid-svg-icons';
+// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+// import { faStar } from '@fortawesome/free-solid-svg-icons';
 // import { faStar as faStarRegular } from '@fortawesome/free-regular-svg-icons';
 import Lottie from 'lottie-react';
 import phoneAnimation from '../assets/mobile.json';
+import Slider from './Slider';
 
 export const Skills = () => {
   return (
-    <Box bg="var(--chakra-colors-chakra-body-bg)" w={'100%'} pb={'5'}>
+    <Box bg="var(--chakra-colors-chakra-body-bg)" w={'100%'}>
       <Container maxW={'container.xl'}>
         <Box
           display={'flex'}
@@ -75,7 +76,7 @@ export const Skills = () => {
             </Flex>
           </Box>
         </Flex>
-        <Box maxW={'600px'} m={'auto'}>
+        <Box maxW={'600px'} m={'auto'} p={0}>
           <Lottie
             animationData={phoneAnimation}
             loop={true}
@@ -83,6 +84,7 @@ export const Skills = () => {
             rendererSettings={{ preserveAspectRatio: 'xMidYMid meet' }}
           />
         </Box>
+        <Slider></Slider>
       </Container>
     </Box>
   );

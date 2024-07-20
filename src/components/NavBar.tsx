@@ -17,7 +17,8 @@ export const NavBar = () => {
       position="fixed"
       top="0"
       p="10px"
-      bg={useColorModeValue('gray.100', 'black')}
+      // bg={useColorModeValue('gray.100', 'black')}
+      bg="var(--chakra-colors-chakra-body-bg)"
       width="100vw"
       py="20px"
       // boxShadow="xl"
@@ -34,7 +35,8 @@ export const NavBar = () => {
         </Text>
         <Button
           onClick={toggleColorMode}
-          bg={useColorModeValue('gray.100', 'black')}
+          // bg={useColorModeValue('gray.100', 'black')}
+          bg="var(--chakra-colors-chakra-body-bg)"
         >
           {colorMode === 'light' ? <MoonIcon /> : <SunIcon />}
         </Button>
