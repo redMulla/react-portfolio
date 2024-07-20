@@ -10,7 +10,7 @@ import Slider from './Slider';
 export const Skills = () => {
   return (
     <Box bg="var(--chakra-colors-chakra-body-bg)" w={'100%'}>
-      <Container maxW={'container.xl'}>
+      <Container maxW={'container.xl'} pb={4}>
         <Box
           display={'flex'}
           justifyContent={'center'}

@@ -66,6 +66,10 @@
   }
 }
 
+.slider:hover .item {
+  animation-play-state: paused !important;
+}
+
 /* svg.lottie {
   width: calc(max(300px, 40vw)) !important;
 } */
