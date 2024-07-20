@@ -10,6 +10,62 @@
   font-size: 1.5em;
 }
 
+.slider .list .item {
+  position: absolute;
+  left: 100%;
+  animation: autoRun 10s linear infinite;
+  transition: filter 0.5s;
+}
+
+.item.i1 {
+  animation-delay: 0s !important;
+}
+
+.item.i2 {
+  animation-delay: 1s !important;
+}
+
+.item.i3 {
+  animation-delay: 2s !important;
+}
+
+.item.i4 {
+  animation-delay: 3s !important;
+}
+
+.item.i5 {
+  animation-delay: 4s !important;
+}
+
+.item.i6 {
+  animation-delay: 5s !important;
+}
+
+.item.i7 {
+  animation-delay: 6s !important;
+}
+
+.item.i8 {
+  animation-delay: 7s !important;
+}
+
+.item.i9 {
+  animation-delay: 8s !important;
+}
+
+.item.i10 {
+  animation-delay: 9s !important;
+}
+
+@keyframes autoRun {
+  from {
+    left: 100%;
+  }
+  to {
+    left: -100%;
+  }
+}
+
 /* svg.lottie {
   width: calc(max(300px, 40vw)) !important;
 } */
