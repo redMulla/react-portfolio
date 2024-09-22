@@ -6,6 +6,7 @@ import MatrixBackground from '../components/Matrix';
 import { CardTestimonials } from '../components/CardTestimonials';
 import { Skills } from '../components/Skills';
 import { Fade } from 'react-awesome-reveal';
+import { Projects } from '../components/Projects';
 
 export const Home = () => {
   return (
@@ -36,6 +37,9 @@ export const Home = () => {
         </Fade>
       </Container>
       <Skills></Skills>
+
+      <Projects></Projects>
+
       <Box>
         <MatrixBackground></MatrixBackground>
       </Box>
