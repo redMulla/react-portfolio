@@ -17,6 +17,10 @@
   transition: filter 0.5s;
 }
 
+.slider {
+  cursor: pointer;
+}
+
 .item.i1 {
   animation-delay: 0s !important;
 }

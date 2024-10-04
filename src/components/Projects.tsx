@@ -27,13 +27,20 @@ export const Projects = () => {
       >
         <Box
           boxSize={300}
-          border={'1px'}
-          borderColor={'white'}
+          border={'2px'}
+          borderColor={'rgb(61, 106, 255)'}
           borderRadius={'10px'}
           overflow={'hidden'}
           className="cont"
         >
-          <Box width={'100%'} h={'75%'} bg={'red'} overflow={'hidden'}>
+          <Box
+            width={'100%'}
+            h={'75%'}
+            bg={'red'}
+            borderBottom={'2px'}
+            borderColor={'rgb(61, 106, 255)'}
+            overflow={'hidden'}
+          >
             <Image
               src="./images/project.png"
               height={'100%'}
