@@ -99,3 +99,17 @@
 .cont:hover .scale {
   scale: 1.1;
 }
+
+.cont:hover .overlay {
+  z-index: 10;
+  animation: slide-down 0.5s forwards;
+}
+
+@keyframes slide-down {
+  from {
+    top: -100%;
+  }
+  to {
+    top: 0;
+  }
+}

@@ -32,6 +32,7 @@ export const Projects = () => {
           borderRadius={'10px'}
           overflow={'hidden'}
           className="cont"
+          position={'relative'}
         >
           <Box
             width={'100%'}
@@ -41,6 +42,14 @@ export const Projects = () => {
             borderColor={'rgb(61, 106, 255)'}
             overflow={'hidden'}
           >
+            <Box
+              w={'100%'}
+              h={'100%'}
+              bg="rgba(0, 0, 0, 0.8)"
+              position={'absolute'}
+              top={'-100%'}
+              className="overlay"
+            ></Box>
             <Image
               src="./images/project.png"
               height={'100%'}
