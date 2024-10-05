@@ -51,6 +51,7 @@ export const Projects = () => {
               borderColor={'rgb(61, 106, 255)'}
               overflow={'hidden'}
               position={'relative'}
+              className="overCont"
             >
               <Box
                 w={'100%'}
@@ -135,6 +136,7 @@ export const Projects = () => {
             </Box>
           </Box>
         </Link>
+
         <Link href="https://tiketa.bi" isExternal>
           <Box
             boxSize={300}
@@ -153,6 +155,7 @@ export const Projects = () => {
               borderColor={'rgb(61, 106, 255)'}
               overflow={'hidden'}
               position={'relative'}
+              className="overCont"
             >
               <Box
                 w={'100%'}
@@ -248,6 +251,7 @@ export const Projects = () => {
             </Box>
           </Box>
         </Link>
+
         <Link href="https://ntwaza.exec.bi/" isExternal>
           <Box
             boxSize={300}
@@ -266,6 +270,7 @@ export const Projects = () => {
               borderColor={'rgb(61, 106, 255)'}
               overflow={'hidden'}
               position={'relative'}
+              className="overCont"
             >
               <Box
                 w={'100%'}
@@ -283,11 +288,11 @@ export const Projects = () => {
               >
                 <Box fontSize={'lg'} fontWeight={'bold'} color={'white'}>
                   <Heading fontSize={'2xl'} mb={2}>
-                    <u>Tiketa eConnect</u>
+                    <u>Ntwaza eConnect</u>
                   </Heading>
                   <span>
-                    Grateful for the opportunity to work on the iHela DBS and
-                    ERP project as a front-end developer!
+                    Ntwaza eConnect optimizes shipment management for efficient
+                    logistics and better customer satisfaction.
                   </span>
                 </Box>
               </Box>
@@ -312,39 +317,53 @@ export const Projects = () => {
               <Box>
                 <Badge
                   variant="solid"
-                  colorScheme="red"
-                  fontFamily={'Nunito sans'}
-                  maxH={'fit-content'}
-                  rounded={'full'}
-                  px={'8px'}
-                >
-                  Angular
-                </Badge>
-              </Box>
-
-              <Box>
-                <Badge
-                  variant="solid"
-                  colorScheme="purple"
-                  fontFamily={'Nunito sans'}
-                  maxH={'fit-content'}
-                  rounded={'full'}
-                  px={'8px'}
-                >
-                  Bootstrap
-                </Badge>
-              </Box>
-
-              <Box>
-                <Badge
-                  variant="solid"
                   colorScheme="blue"
                   fontFamily={'Nunito sans'}
                   maxH={'fit-content'}
                   rounded={'full'}
                   px={'8px'}
                 >
-                  TypeScript
+                  React
+                </Badge>
+              </Box>
+
+              <Box>
+                <Badge
+                  variant="solid"
+                  colorScheme="green"
+                  fontFamily={'Nunito sans'}
+                  maxH={'fit-content'}
+                  rounded={'full'}
+                  px={'8px'}
+                >
+                  NodeJs
+                </Badge>
+              </Box>
+
+              <Box>
+                <Badge
+                  variant="outline"
+                  colorScheme="green"
+                  fontFamily={'Nunito sans'}
+                  maxH={'fit-content'}
+                  rounded={'full'}
+                  px={'8px'}
+                >
+                  Express
+                </Badge>
+              </Box>
+
+              <Box>
+                <Badge
+                  variant="solid"
+                  colorScheme="pink"
+                  fontFamily={'Nunito sans'}
+                  maxH={'fit-content'}
+                  rounded={'full'}
+                  px={'8px'}
+                  mt={0}
+                >
+                  GraphQL
                 </Badge>
               </Box>
             </Box>
@@ -369,6 +388,7 @@ export const Projects = () => {
               borderColor={'rgb(61, 106, 255)'}
               overflow={'hidden'}
               position={'relative'}
+              className="overCont"
             >
               <Box
                 w={'100%'}
@@ -385,9 +405,12 @@ export const Projects = () => {
                 className="overlay"
               >
                 <Box fontSize={'lg'} fontWeight={'bold'} color={'white'}>
+                  <Heading fontSize={'2xl'} mb={2}>
+                    <u>Safi Deals</u>
+                  </Heading>
                   <span>
-                    Grateful for the opportunity to work on the iHela DBS and
-                    ERP project as a front-end developer!
+                    A platform where integrity meets opportunity, connecting
+                    buyers and sellers in a safe and ethical marketplace.
                   </span>
                 </Box>
               </Box>
@@ -412,39 +435,53 @@ export const Projects = () => {
               <Box>
                 <Badge
                   variant="solid"
-                  colorScheme="red"
-                  fontFamily={'Nunito sans'}
-                  maxH={'fit-content'}
-                  rounded={'full'}
-                  px={'8px'}
-                >
-                  Angular
-                </Badge>
-              </Box>
-
-              <Box>
-                <Badge
-                  variant="solid"
-                  colorScheme="purple"
-                  fontFamily={'Nunito sans'}
-                  maxH={'fit-content'}
-                  rounded={'full'}
-                  px={'8px'}
-                >
-                  Bootstrap
-                </Badge>
-              </Box>
-
-              <Box>
-                <Badge
-                  variant="solid"
                   colorScheme="blue"
                   fontFamily={'Nunito sans'}
                   maxH={'fit-content'}
                   rounded={'full'}
                   px={'8px'}
                 >
-                  TypeScript
+                  React
+                </Badge>
+              </Box>
+
+              <Box>
+                <Badge
+                  variant="solid"
+                  colorScheme="green"
+                  fontFamily={'Nunito sans'}
+                  maxH={'fit-content'}
+                  rounded={'full'}
+                  px={'8px'}
+                >
+                  NodeJs
+                </Badge>
+              </Box>
+
+              <Box>
+                <Badge
+                  variant="outline"
+                  colorScheme="green"
+                  fontFamily={'Nunito sans'}
+                  maxH={'fit-content'}
+                  rounded={'full'}
+                  px={'8px'}
+                >
+                  Express
+                </Badge>
+              </Box>
+
+              <Box>
+                <Badge
+                  variant="solid"
+                  colorScheme="pink"
+                  fontFamily={'Nunito sans'}
+                  maxH={'fit-content'}
+                  rounded={'full'}
+                  px={'8px'}
+                  mt={0}
+                >
+                  GraphQL
                 </Badge>
               </Box>
             </Box>
