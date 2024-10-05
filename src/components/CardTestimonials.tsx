@@ -1,7 +1,6 @@
 import { Box, Heading, Image, Text, useColorModeValue } from '@chakra-ui/react';
 import React from 'react';
 import 'react-loading-skeleton/dist/skeleton.css';
-import Skeleton from 'react-loading-skeleton';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faStar as faStarSolid } from '@fortawesome/free-solid-svg-icons';
 import { faStar as faStarRegular } from '@fortawesome/free-regular-svg-icons';

@@ -113,16 +113,21 @@ const AboutSection = () => {
               thrive on challenges, viewing each project as an opportunity to
               learn and innovate. My journey in web development has taught me
               the importance of blending functionality with creativity, and I
-              love transforming complex problems into elegant solutions. Beyond
-              coding, I have a deep passion for music. Whether I’m jamming on my
-              instrument or diving into a new playlist, music fuels my
-              creativity and inspires my work. I believe that the rhythm and
-              harmony found in music parallel the art of web design—both require
-              balance, creativity, and a touch of intuition. I’m always eager to
-              collaborate and connect with fellow creatives and visionaries. If
-              you’re looking for someone who is not only skilled in web
-              development but also brings a fresh perspective and a love for
-              innovation, let’s create something extraordinary together!
+              love transforming complex problems into elegant solutions.
+            </Text>
+            <Text my={2}>
+              Beyond coding, I have a deep passion for music. Whether I’m
+              jamming on my instrument or diving into a new playlist, music
+              fuels my creativity and inspires my work. I believe that the
+              rhythm and harmony found in music parallel the art of web
+              design—both require balance, creativity, and a touch of intuition.
+            </Text>
+            <Text>
+              I’m always eager to collaborate and connect with fellow creatives
+              and visionaries. If you’re looking for someone who is not only
+              skilled in web development but also brings a fresh perspective and
+              a love for innovation, let’s create something extraordinary
+              together!
             </Text>
           </Box>
         </Box>
