@@ -9,7 +9,6 @@ import {
   Input,
   Text,
   Textarea,
-  useColorModeValue,
   useToast,
 } from '@chakra-ui/react';
 import { useState } from 'react';
@@ -73,7 +72,7 @@ const ContactForm = () => {
   };
 
   return (
-    <Box as="footer" p={5} bg={useColorModeValue('gray.100', 'black')}>
+    <Box as="footer" p={5} bg={'black'} textColor={'gray.300'}>
       <Container maxW="container.xl">
         <Heading as="h3" fontSize="3xl" mb={4} textAlign={'center'}>
           Contact Me
