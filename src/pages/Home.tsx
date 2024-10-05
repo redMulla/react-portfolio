@@ -1,4 +1,4 @@
-import { Box, Container } from '@chakra-ui/react';
+import { Box, useColorModeValue, Image, Container } from '@chakra-ui/react';
 import React from 'react';
 import { NavBar } from '../components/NavBar';
 import { Hero } from '../components/Hero';
@@ -8,6 +8,7 @@ import { Skills } from '../components/Skills';
 import { Fade } from 'react-awesome-reveal';
 import { Projects } from '../components/Projects';
 import AboutSection from '../components/AboutSection';
+import Footer from '../components/Footer';
 
 export const Home = () => {
   return (
@@ -41,6 +42,7 @@ export const Home = () => {
 
       <Projects></Projects>
       <AboutSection />
+      <Footer />
       <Box>
         <MatrixBackground></MatrixBackground>
       </Box>
