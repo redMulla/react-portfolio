@@ -1,4 +1,12 @@
-import { Box, Container, Flex, Heading, Image } from '@chakra-ui/react';
+import {
+  Badge,
+  Box,
+  Container,
+  Flex,
+  Heading,
+  Image,
+  Link,
+} from '@chakra-ui/react';
 import React from 'react';
 
 export const Projects = () => {
@@ -25,43 +33,423 @@ export const Projects = () => {
         justifyContent={'center'}
         alignItems={'center'}
       >
-        <Box
-          boxSize={300}
-          border={'2px'}
-          borderColor={'rgb(61, 106, 255)'}
-          borderRadius={'10px'}
-          overflow={'hidden'}
-          className="cont"
-          position={'relative'}
-        >
+        <Link href="https://ihela.bi/en/" isExternal>
           <Box
-            width={'100%'}
-            h={'75%'}
-            bg={'red'}
-            borderBottom={'2px'}
+            boxSize={300}
+            border={'2px'}
             borderColor={'rgb(61, 106, 255)'}
+            borderRadius={'10px'}
             overflow={'hidden'}
+            cursor={'pointer'}
+            className="cont"
           >
             <Box
-              w={'100%'}
-              h={'100%'}
-              bg="rgba(0, 0, 0, 0.8)"
-              position={'absolute'}
-              top={'-100%'}
-              className="overlay"
-            ></Box>
-            <Image
-              src="./images/project.png"
-              height={'100%'}
-              objectFit={'cover'}
-              className="scale"
-            ></Image>
+              width={'100%'}
+              h={'75%'}
+              bg={'red'}
+              borderBottom={'2px'}
+              borderColor={'rgb(61, 106, 255)'}
+              overflow={'hidden'}
+              position={'relative'}
+            >
+              <Box
+                w={'100%'}
+                h={'100%'}
+                bg="rgba(0, 0, 0, 0.8)"
+                position={'absolute'}
+                top={'-100%'}
+                fontFamily={'Nunito sans'}
+                p={'10px'}
+                display={'flex'}
+                justifyContent={'center'}
+                alignItems={'center'}
+                textAlign={'center'}
+                className="overlay"
+              >
+                <Box fontSize={'lg'} fontWeight={'bold'} color={'white'}>
+                  <Heading fontSize={'2xl'} mb={2}>
+                    <u>iHela</u>
+                  </Heading>
+                  <span>
+                    Grateful for the opportunity to work on the iHela DBS and
+                    ERP project as a front-end developer!
+                  </span>
+                </Box>
+              </Box>
+              <Image
+                src="./images/project.png"
+                height={'100%'}
+                objectFit={'cover'}
+                className="scale"
+              ></Image>
+            </Box>
+            <Box
+              height={'25%'}
+              width={'100%'}
+              fontFamily={'Nunito sans'}
+              px={'10px'}
+              display={'flex'}
+              justifyContent={'center'}
+              alignItems={'center'}
+              flexWrap={'wrap'}
+              gap={'10px'}
+            >
+              <Box>
+                <Badge
+                  variant="solid"
+                  colorScheme="red"
+                  fontFamily={'Nunito sans'}
+                  maxH={'fit-content'}
+                  rounded={'full'}
+                  px={'8px'}
+                >
+                  Angular
+                </Badge>
+              </Box>
+
+              <Box>
+                <Badge
+                  variant="solid"
+                  colorScheme="purple"
+                  fontFamily={'Nunito sans'}
+                  maxH={'fit-content'}
+                  rounded={'full'}
+                  px={'8px'}
+                >
+                  Bootstrap
+                </Badge>
+              </Box>
+
+              <Box>
+                <Badge
+                  variant="solid"
+                  colorScheme="blue"
+                  fontFamily={'Nunito sans'}
+                  maxH={'fit-content'}
+                  rounded={'full'}
+                  px={'8px'}
+                >
+                  TypeScript
+                </Badge>
+              </Box>
+            </Box>
           </Box>
-          <Box height={'100%'} width={'100%'}></Box>
-        </Box>
-        <Box boxSize={300} bg={'white'}></Box>
-        <Box boxSize={300} bg={'white'}></Box>
-        <Box boxSize={300} bg={'white'}></Box>
+        </Link>
+        <Link href="https://tiketa.bi" isExternal>
+          <Box
+            boxSize={300}
+            border={'2px'}
+            borderColor={'rgb(61, 106, 255)'}
+            borderRadius={'10px'}
+            overflow={'hidden'}
+            cursor={'pointer'}
+            className="cont"
+          >
+            <Box
+              width={'100%'}
+              h={'75%'}
+              bg={'red'}
+              borderBottom={'2px'}
+              borderColor={'rgb(61, 106, 255)'}
+              overflow={'hidden'}
+              position={'relative'}
+            >
+              <Box
+                w={'100%'}
+                h={'100%'}
+                bg="rgba(0, 0, 0, 0.8)"
+                position={'absolute'}
+                top={'-100%'}
+                fontFamily={'Nunito sans'}
+                p={'10px'}
+                display={'flex'}
+                justifyContent={'center'}
+                alignItems={'center'}
+                textAlign={'center'}
+                className="overlay"
+              >
+                <Box fontSize={'lg'} fontWeight={'bold'} color={'white'}>
+                  <Heading fontSize={'2xl'} mb={2}>
+                    <u>Tiketa</u>
+                  </Heading>
+                  <span>An event and tickets management app.</span>
+                </Box>
+              </Box>
+              <Image
+                src="./images/tiketa.png"
+                height={'100%'}
+                objectFit={'cover'}
+                className="scale"
+              ></Image>
+            </Box>
+            <Box
+              height={'25%'}
+              width={'100%'}
+              fontFamily={'Nunito sans'}
+              px={'10px'}
+              display={'flex'}
+              justifyContent={'center'}
+              alignItems={'center'}
+              flexWrap={'wrap'}
+              gap={'10px'}
+            >
+              <Box>
+                <Badge
+                  variant="solid"
+                  colorScheme="blue"
+                  fontFamily={'Nunito sans'}
+                  maxH={'fit-content'}
+                  rounded={'full'}
+                  px={'8px'}
+                >
+                  React
+                </Badge>
+              </Box>
+
+              <Box>
+                <Badge
+                  variant="solid"
+                  colorScheme="green"
+                  fontFamily={'Nunito sans'}
+                  maxH={'fit-content'}
+                  rounded={'full'}
+                  px={'8px'}
+                >
+                  NodeJs
+                </Badge>
+              </Box>
+
+              <Box>
+                <Badge
+                  variant="outline"
+                  colorScheme="green"
+                  fontFamily={'Nunito sans'}
+                  maxH={'fit-content'}
+                  rounded={'full'}
+                  px={'8px'}
+                >
+                  Express
+                </Badge>
+              </Box>
+
+              <Box>
+                <Badge
+                  variant="solid"
+                  colorScheme="pink"
+                  fontFamily={'Nunito sans'}
+                  maxH={'fit-content'}
+                  rounded={'full'}
+                  px={'8px'}
+                  mt={0}
+                >
+                  GraphQL
+                </Badge>
+              </Box>
+            </Box>
+          </Box>
+        </Link>
+        <Link href="https://ntwaza.exec.bi/" isExternal>
+          <Box
+            boxSize={300}
+            border={'2px'}
+            borderColor={'rgb(61, 106, 255)'}
+            borderRadius={'10px'}
+            overflow={'hidden'}
+            cursor={'pointer'}
+            className="cont"
+          >
+            <Box
+              width={'100%'}
+              h={'75%'}
+              bg={'red'}
+              borderBottom={'2px'}
+              borderColor={'rgb(61, 106, 255)'}
+              overflow={'hidden'}
+              position={'relative'}
+            >
+              <Box
+                w={'100%'}
+                h={'100%'}
+                bg="rgba(0, 0, 0, 0.8)"
+                position={'absolute'}
+                top={'-100%'}
+                fontFamily={'Nunito sans'}
+                p={'10px'}
+                display={'flex'}
+                justifyContent={'center'}
+                alignItems={'center'}
+                textAlign={'center'}
+                className="overlay"
+              >
+                <Box fontSize={'lg'} fontWeight={'bold'} color={'white'}>
+                  <Heading fontSize={'2xl'} mb={2}>
+                    <u>Tiketa eConnect</u>
+                  </Heading>
+                  <span>
+                    Grateful for the opportunity to work on the iHela DBS and
+                    ERP project as a front-end developer!
+                  </span>
+                </Box>
+              </Box>
+              <Image
+                src="./images/ntwaza.png"
+                height={'100%'}
+                objectFit={'cover'}
+                className="scale"
+              ></Image>
+            </Box>
+            <Box
+              height={'25%'}
+              width={'100%'}
+              fontFamily={'Nunito sans'}
+              px={'10px'}
+              display={'flex'}
+              justifyContent={'center'}
+              alignItems={'center'}
+              flexWrap={'wrap'}
+              gap={'10px'}
+            >
+              <Box>
+                <Badge
+                  variant="solid"
+                  colorScheme="red"
+                  fontFamily={'Nunito sans'}
+                  maxH={'fit-content'}
+                  rounded={'full'}
+                  px={'8px'}
+                >
+                  Angular
+                </Badge>
+              </Box>
+
+              <Box>
+                <Badge
+                  variant="solid"
+                  colorScheme="purple"
+                  fontFamily={'Nunito sans'}
+                  maxH={'fit-content'}
+                  rounded={'full'}
+                  px={'8px'}
+                >
+                  Bootstrap
+                </Badge>
+              </Box>
+
+              <Box>
+                <Badge
+                  variant="solid"
+                  colorScheme="blue"
+                  fontFamily={'Nunito sans'}
+                  maxH={'fit-content'}
+                  rounded={'full'}
+                  px={'8px'}
+                >
+                  TypeScript
+                </Badge>
+              </Box>
+            </Box>
+          </Box>
+        </Link>
+
+        <Link href="https://safideals.com/" isExternal>
+          <Box
+            boxSize={300}
+            border={'2px'}
+            borderColor={'rgb(61, 106, 255)'}
+            borderRadius={'10px'}
+            overflow={'hidden'}
+            cursor={'pointer'}
+            className="cont"
+          >
+            <Box
+              width={'100%'}
+              h={'75%'}
+              bg={'red'}
+              borderBottom={'2px'}
+              borderColor={'rgb(61, 106, 255)'}
+              overflow={'hidden'}
+              position={'relative'}
+            >
+              <Box
+                w={'100%'}
+                h={'100%'}
+                bg="rgba(0, 0, 0, 0.8)"
+                position={'absolute'}
+                top={'-100%'}
+                fontFamily={'Nunito sans'}
+                p={'10px'}
+                display={'flex'}
+                justifyContent={'center'}
+                alignItems={'center'}
+                textAlign={'center'}
+                className="overlay"
+              >
+                <Box fontSize={'lg'} fontWeight={'bold'} color={'white'}>
+                  <span>
+                    Grateful for the opportunity to work on the iHela DBS and
+                    ERP project as a front-end developer!
+                  </span>
+                </Box>
+              </Box>
+              <Image
+                src="./images/safideals.png"
+                height={'100%'}
+                objectFit={'cover'}
+                className="scale"
+              ></Image>
+            </Box>
+            <Box
+              height={'25%'}
+              width={'100%'}
+              fontFamily={'Nunito sans'}
+              px={'10px'}
+              display={'flex'}
+              justifyContent={'center'}
+              alignItems={'center'}
+              flexWrap={'wrap'}
+              gap={'10px'}
+            >
+              <Box>
+                <Badge
+                  variant="solid"
+                  colorScheme="red"
+                  fontFamily={'Nunito sans'}
+                  maxH={'fit-content'}
+                  rounded={'full'}
+                  px={'8px'}
+                >
+                  Angular
+                </Badge>
+              </Box>
+
+              <Box>
+                <Badge
+                  variant="solid"
+                  colorScheme="purple"
+                  fontFamily={'Nunito sans'}
+                  maxH={'fit-content'}
+                  rounded={'full'}
+                  px={'8px'}
+                >
+                  Bootstrap
+                </Badge>
+              </Box>
+
+              <Box>
+                <Badge
+                  variant="solid"
+                  colorScheme="blue"
+                  fontFamily={'Nunito sans'}
+                  maxH={'fit-content'}
+                  rounded={'full'}
+                  px={'8px'}
+                >
+                  TypeScript
+                </Badge>
+              </Box>
+            </Box>
+          </Box>
+        </Link>
       </Flex>
     </Container>
   );
