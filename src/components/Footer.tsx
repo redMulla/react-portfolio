@@ -117,13 +117,10 @@ const ContactForm = () => {
             </Button>
           </Box>
         </form>
-
-        <Flex borderTop={'2px'} width={'100%'} pt={3} justifyContent={'center'}>
-          <Text>
-            &copy; {currentYear} Vassilly Charite. All rights reserved.
-          </Text>
-        </Flex>
       </Container>
+      <Flex borderTop={'2px'} width={'100%'} pt={3} justifyContent={'center'}>
+        <Text>&copy; {currentYear} Vassilly Charite. All rights reserved.</Text>
+      </Flex>
     </Box>
   );
 };

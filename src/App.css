@@ -105,11 +105,24 @@
   animation: slide-down 0.5s forwards;
 }
 
+.animate {
+  animation: slide-in 0.5s ease-in forwards;
+}
+
 @keyframes slide-down {
   from {
     top: -100%;
   }
   to {
     top: 0;
+  }
+}
+
+@keyframes slide-in {
+  from {
+    left: -100%;
+  }
+  to {
+    left: 0;
   }
 }
