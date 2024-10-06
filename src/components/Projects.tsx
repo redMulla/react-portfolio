@@ -46,7 +46,7 @@ export const Projects = () => {
             <Box
               width={'100%'}
               h={'75%'}
-              bg={'red'}
+              bg={'gray.600'}
               borderBottom={'2px'}
               borderColor={'rgb(61, 106, 255)'}
               overflow={'hidden'}
@@ -150,7 +150,7 @@ export const Projects = () => {
             <Box
               width={'100%'}
               h={'75%'}
-              bg={'red'}
+              bg={'gray.600'}
               borderBottom={'2px'}
               borderColor={'rgb(61, 106, 255)'}
               overflow={'hidden'}
@@ -265,7 +265,7 @@ export const Projects = () => {
             <Box
               width={'100%'}
               h={'75%'}
-              bg={'red'}
+              bg={'gray.600'}
               borderBottom={'2px'}
               borderColor={'rgb(61, 106, 255)'}
               overflow={'hidden'}
@@ -383,7 +383,7 @@ export const Projects = () => {
             <Box
               width={'100%'}
               h={'75%'}
-              bg={'red'}
+              bg={'gray.600'}
               borderBottom={'2px'}
               borderColor={'rgb(61, 106, 255)'}
               overflow={'hidden'}
