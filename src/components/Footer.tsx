@@ -108,6 +108,7 @@ const ContactForm = () => {
               onChange={handleChange}
               placeholder="Your message"
               resize="none"
+              height={'100px'}
             />
           </FormControl>
           <Box display={'flex'} justifyContent={'center'} my={10}>
