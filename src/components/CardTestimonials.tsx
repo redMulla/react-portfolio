@@ -54,7 +54,7 @@ export const CardTestimonials = () => {
         <FontAwesomeIcon icon={faStarSolid} />
         <FontAwesomeIcon icon={faStarSolid} />
         <FontAwesomeIcon icon={faStarSolid} />
-        <FontAwesomeIcon icon={faStarRegular} />
+        <FontAwesomeIcon icon={faStarSolid} />
         <FontAwesomeIcon icon={faStarRegular} />
       </Box>
     </Box>
