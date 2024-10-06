@@ -1,5 +1,6 @@
 import { Box, Container } from '@chakra-ui/react';
 import React from 'react';
+import { Analytics } from '@vercel/analytics/react';
 import { NavBar } from '../components/NavBar';
 import { Hero } from '../components/Hero';
 import MatrixBackground from '../components/Matrix';
@@ -13,6 +14,7 @@ import Footer from '../components/Footer';
 export const Home = () => {
   return (
     <>
+      <Analytics />
       <NavBar></NavBar>
       <br />
       <Hero></Hero>
