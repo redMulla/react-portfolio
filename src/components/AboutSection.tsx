@@ -2,12 +2,21 @@ import React from 'react';
 import {
   Box,
   Container,
-  Flex,
+  Grid,
+  GridItem,
   Heading,
   Image,
   Link,
   Text,
+  VStack,
+  HStack,
   useColorModeValue,
+  Avatar,
+  IconButton,
+  Stat,
+  StatLabel,
+  StatNumber,
+  SimpleGrid,
 } from '@chakra-ui/react';
 import {
   faGithub,
@@ -16,121 +25,269 @@ import {
   faTwitter,
 } from '@fortawesome/free-brands-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { Fade, Zoom } from 'react-awesome-reveal';
+import { motion } from 'framer-motion';
 
 const AboutSection = () => {
+  const bgGradient = useColorModeValue(
+    'linear(to-br, white, blue.50, purple.50)',
+    'linear(to-br, gray.800, gray.900, blue.900)'
+  );
+  const cardBg = useColorModeValue('white', 'gray.700');
+  const textColor = useColorModeValue('gray.600', 'gray.300');
+  const headingColor = useColorModeValue('gray.800', 'white');
+  const githubColor = useColorModeValue("#333", "#fff");
+  const socialHoverBg = useColorModeValue('gray.100', 'gray.600');
+  const borderColor = useColorModeValue('gray.200', 'gray.600');
+  
+  const socialLinks = [
+    {
+      icon: faInstagram,
+      href: "https://www.instagram.com/red_vassily/",
+      label: "Instagram",
+      color: "#E4405F"
+    },
+    {
+      icon: faTwitter,
+      href: "https://x.com/Vassilly3",
+      label: "Twitter",
+      color: "#1DA1F2"
+    },
+    {
+      icon: faLinkedin,
+      href: "https://www.linkedin.com/in/vassilly-red-v-ibinkwiye-3884131b9",
+      label: "LinkedIn",
+      color: "#0077B5"
+    },
+    {
+      icon: faGithub,
+      href: "https://github.com/redMulla",
+      label: "GitHub",
+      color: githubColor
+    }
+  ];
+
+  const stats = [
+    { label: "Years Experience", value: "3+" },
+    { label: "Projects Completed", value: "15+" },
+    { label: "Technologies", value: "10+" },
+    { label: "Happy Clients", value: "20+" }
+  ];
+
   return (
-    <Box bg={useColorModeValue('white', 'gray.900')}>
-      <Container maxW={'container.xl'} pb={'30px'}>
-        <Heading textAlign={'center'} py={'10'} className="blueText">
-          About Me
-        </Heading>
+    <Box 
+      bgGradient={bgGradient}
+      py={{ base: 16, md: 20 }}
+      position="relative"
+      overflow="hidden"
+    >
+      {/* Background decoration */}
+      <Box
+        position="absolute"
+        top="20%"
+        left="5%"
+        w="300px"
+        h="300px"
+        bgGradient="radial(circle, purple.400, transparent)"
+        opacity={0.1}
+        borderRadius="full"
+        filter="blur(40px)"
+      />
+      
+      <Container maxW="container.xl">
+        <VStack spacing={16}>
+          {/* Section Header */}
+          <Fade direction="up" triggerOnce={true}>
+            <VStack spacing={4} textAlign="center">
+              <Heading
+                fontSize={{ base: '3xl', md: '4xl', lg: '5xl' }}
+                bgGradient="linear(to-r, blue.400, purple.500, pink.400)"
+                bgClip="text"
+                fontWeight="bold"
+              >
+                About Me
+              </Heading>
+              <Text
+                fontSize={{ base: 'lg', md: 'xl' }}
+                color={textColor}
+                maxW="600px"
+              >
+                Get to know the person behind the code
+              </Text>
+            </VStack>
+          </Fade>
 
-        <Box
-          display={'flex'}
-          justifyContent={'space-around'}
-          alignItems={'center'}
-          flexDir={{ base: 'column', lg: 'row' }}
-          pb={6}
-        >
-          <Box
-            maxW={300}
-            mb={{ base: '60px', lg: 0 }}
-            me={{ base: 0, lg: '30px' }}
+          {/* Main Content */}
+          <Grid
+            templateColumns={{ base: '1fr', lg: '1fr 2fr' }}
+            gap={{ base: 12, lg: 16 }}
+            alignItems="start"
+            w="full"
           >
-            <Box
-              boxSize={300}
-              minH={300}
-              minW={300}
-              borderRadius={'20px'}
-              overflow={'hidden'}
-              mb={5}
-              border={'2px'}
-              borderColor={'blue.500'}
-            >
-              <Image
-                src={'/images/profile.png'}
-                alt={'Profile Image'}
-                boxSize={'100%'}
-              />
-            </Box>
+            {/* Profile Section */}
+            <GridItem>
+              <Zoom triggerOnce={true} delay={200}>
+                <VStack spacing={8} align="center">
+                  {/* Profile Image */}
+                  <Box position="relative">
+                    <Box
+                      position="absolute"
+                      inset={0}
+                      bgGradient="radial(circle, blue.400, transparent)"
+                      opacity={0.3}
+                      borderRadius="full"
+                      filter="blur(20px)"
+                      transform="scale(1.2)"
+                    />
+                    <Avatar
+                      size="2xl"
+                      src="/images/profile.png"
+                      name="Vassilly Ibinkwiye"
+                      border="4px solid"
+                      borderColor="blue.500"
+                      boxShadow="xl"
+                      w={{ base: "200px", md: "250px" }}
+                      h={{ base: "200px", md: "250px" }}
+                    />
+                  </Box>
 
-            <Flex justifyContent={'space-around'} alignItems={'center'}>
-              <Link
-                href="https://www.instagram.com/red_vassily/"
-                isExternal
-                sx={{
-                  '&:hover': {
-                    textColor: 'blue.500',
-                  },
-                }}
-              >
-                <FontAwesomeIcon icon={faInstagram} size="2xl" />
-              </Link>
+                  {/* Social Links */}
+                  <HStack spacing={4}>
+                    {socialLinks.map((social, index) => (
+                      <motion.div
+                        key={index}
+                        whileHover={{ scale: 1.1, y: -2 }}
+                        whileTap={{ scale: 0.95 }}
+                      >
+                        <Link href={social.href} isExternal>
+                          <IconButton
+                            aria-label={social.label}
+                            icon={<FontAwesomeIcon icon={social.icon} />}
+                            size="lg"
+                            variant="ghost"
+                            rounded="full"
+                            color={textColor}
+                            _hover={{
+                              bg: socialHoverBg,
+                              color: social.color,
+                              transform: 'translateY(-2px)',
+                            }}
+                            transition="all 0.3s ease"
+                          />
+                        </Link>
+                      </motion.div>
+                    ))}
+                  </HStack>
 
-              <Link
-                href="https://x.com/Vassilly3"
-                isExternal
-                sx={{
-                  '&:hover': {
-                    textColor: 'blue.500',
-                  },
-                }}
-              >
-                <FontAwesomeIcon icon={faTwitter} size="2xl" />
-              </Link>
+                  {/* Stats */}
+                  <Box
+                    bg={cardBg}
+                    p={6}
+                    rounded="xl"
+                    boxShadow="lg"
+                    border="1px solid"
+                    borderColor={borderColor}
+                    w="full"
+                  >
+                    <SimpleGrid columns={2} spacing={4}>
+                      {stats.map((stat, index) => (
+                        <Stat key={index} textAlign="center">
+                          <StatNumber
+                            fontSize="2xl"
+                            fontWeight="bold"
+                            color="blue.500"
+                          >
+                            {stat.value}
+                          </StatNumber>
+                          <StatLabel
+                            fontSize="sm"
+                            color={textColor}
+                          >
+                            {stat.label}
+                          </StatLabel>
+                        </Stat>
+                      ))}
+                    </SimpleGrid>
+                  </Box>
+                </VStack>
+              </Zoom>
+            </GridItem>
 
-              <Link
-                href="https://www.linkedin.com/in/vassilly-red-v-ibinkwiye-3884131b9"
-                isExternal
-                sx={{
-                  '&:hover': {
-                    textColor: 'blue.500',
-                  },
-                }}
-              >
-                <FontAwesomeIcon icon={faLinkedin} size="2xl" />
-              </Link>
+            {/* Content Section */}
+            <GridItem>
+              <Fade direction="right" triggerOnce={true} delay={400}>
+                <VStack spacing={6} align="start" textAlign="left">
+                  <Box>
+                    <Heading
+                      size="lg"
+                      color={headingColor}
+                      mb={4}
+                    >
+                      Hi there! I'm{' '}
+                      <Text as="span" color="blue.500">
+                        Vassilly Ibinkwiye
+                      </Text>
+                    </Heading>
+                    <Text
+                      fontSize={{ base: 'md', md: 'lg' }}
+                      color={textColor}
+                      lineHeight="1.8"
+                    >
+                      A 30-year-old Full-Stack web developer with three years of
+                      hands-on experience crafting seamless digital experiences. I
+                      thrive on challenges, viewing each project as an opportunity to
+                      learn and innovate. My journey in web development has taught me
+                      the importance of blending functionality with creativity, and I
+                      love transforming complex problems into elegant solutions.
+                    </Text>
+                  </Box>
 
-              <Link
-                href="https://github.com/redMulla"
-                isExternal
-                sx={{
-                  '&:hover': {
-                    textColor: 'blue.500',
-                  },
-                }}
-              >
-                <FontAwesomeIcon icon={faGithub} size="2xl" />
-              </Link>
-            </Flex>
-          </Box>
+                  <Box>
+                    <Heading
+                      size="md"
+                      color={headingColor}
+                      mb={3}
+                    >
+                      Beyond the Code
+                    </Heading>
+                    <Text
+                      fontSize={{ base: 'md', md: 'lg' }}
+                      color={textColor}
+                      lineHeight="1.8"
+                    >
+                      Beyond coding, I have a deep passion for music. Whether I'm
+                      jamming on my instrument or diving into a new playlist, music
+                      fuels my creativity and inspires my work. I believe that the
+                      rhythm and harmony found in music parallel the art of web
+                      design—both require balance, creativity, and a touch of intuition.
+                    </Text>
+                  </Box>
 
-          <Box maxW={'600px'} fontSize={'xl'} textAlign={'center'}>
-            <Text>
-              Hi there! I’m <span className="blueText">Vassilly Ibinkwiye</span>
-              , a 29-year-old Full-Stack web developer with three years of
-              hands-on experience crafting seamless digital experiences. I
-              thrive on challenges, viewing each project as an opportunity to
-              learn and innovate. My journey in web development has taught me
-              the importance of blending functionality with creativity, and I
-              love transforming complex problems into elegant solutions.
-            </Text>
-            <Text my={2}>
-              Beyond coding, I have a deep passion for music. Whether I’m
-              jamming on my instrument or diving into a new playlist, music
-              fuels my creativity and inspires my work. I believe that the
-              rhythm and harmony found in music parallel the art of web
-              design—both require balance, creativity, and a touch of intuition.
-            </Text>
-            <Text>
-              I’m always eager to collaborate and connect with fellow creatives
-              and visionaries. If you’re looking for someone who is not only
-              skilled in web development but also brings a fresh perspective and
-              a love for innovation, let’s create something extraordinary
-              together!
-            </Text>
-          </Box>
-        </Box>
+                  <Box>
+                    <Heading
+                      size="md"
+                      color={headingColor}
+                      mb={3}
+                    >
+                      Let's Create Together
+                    </Heading>
+                    <Text
+                      fontSize={{ base: 'md', md: 'lg' }}
+                      color={textColor}
+                      lineHeight="1.8"
+                    >
+                      I'm always eager to collaborate and connect with fellow creatives
+                      and visionaries. If you're looking for someone who is not only
+                      skilled in web development but also brings a fresh perspective and
+                      a love for innovation, let's create something extraordinary
+                      together!
+                    </Text>
+                  </Box>
+                </VStack>
+              </Fade>
+            </GridItem>
+          </Grid>
+        </VStack>
       </Container>
     </Box>
   );

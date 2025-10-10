@@ -7,62 +7,79 @@ import {
   Text,
   useColorMode,
   useColorModeValue,
+  HStack,
+  IconButton,
 } from '@chakra-ui/react';
 import React from 'react';
 
 export const NavBar = () => {
-  const variants = {
-    hidden: { x: '-100%', opacity: 0 },
-    visible: { x: 0, opacity: 1 },
-  };
   const { colorMode, toggleColorMode } = useColorMode();
+  const bgColor = useColorModeValue('rgba(255, 255, 255, 0.95)', 'rgba(26, 32, 44, 0.95)');
+  const borderColor = useColorModeValue('gray.200', 'gray.700');
 
   return (
-    <Box display={'flex'} flexDir={'column'} position="fixed" zIndex={'4'}>
-      <Box
-        top="0"
-        p="10px"
-        bg={useColorModeValue('gray.100', 'black')}
-        // bg="var(--chakra-colors-chakra-body-bg)"
-        width="100vw"
-        py="20px"
-        // boxShadow="xl"
-        // borderBottom="2px"
-        // zIndex={'4'}
-      >
-        <Container
-          maxW="container.xl"
-          display="flex"
-          justifyContent="space-between"
-        >
-          <Text fontSize="2xl" className="blueText" fontWeight="bold">
-            My Portfolio
-          </Text>
-          <Button
-            onClick={toggleColorMode}
-            bg={useColorModeValue('gray.100', 'black')}
-            // bg="var(--chakra-colors-chakra-body-bg)"
+    <Box 
+      position="fixed" 
+      top={0} 
+      left={0} 
+      right={0} 
+      zIndex={1000}
+      backdropFilter="blur(10px)"
+      bg={bgColor}
+      borderBottom="1px solid"
+      borderColor={borderColor}
+      boxShadow="sm"
+    >
+      <Container maxW="container.xl" py={4}>
+        <HStack justify="space-between" align="center">
+          {/* Logo/Brand */}
+          <motion.div
+            initial={{ opacity: 0, x: -20 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.5 }}
           >
-            {colorMode === 'light' ? <MoonIcon /> : <SunIcon />}
-          </Button>
-        </Container>
-      </Box>
+            <Text 
+              fontSize={{ base: "xl", md: "2xl" }} 
+              fontWeight="bold"
+              bgGradient="linear(to-r, blue.400, blue.600, purple.500)"
+              bgClip="text"
+              letterSpacing="tight"
+            >
+              Vassilly Ibinkwiye
+            </Text>
+          </motion.div>
+
+          {/* Navigation Actions */}
+          <HStack spacing={4}>
+            {/* Theme Toggle */}
+            <IconButton
+              aria-label="Toggle color mode"
+              icon={colorMode === 'light' ? <MoonIcon /> : <SunIcon />}
+              onClick={toggleColorMode}
+              variant="ghost"
+              size="md"
+              rounded="full"
+              _hover={{
+                bg: useColorModeValue('gray.100', 'gray.700'),
+                transform: 'scale(1.05)',
+              }}
+              transition="all 0.2s"
+            />
+          </HStack>
+        </HStack>
+      </Container>
+
+      {/* Animated accent line */}
       <motion.div
-        initial="hidden"
-        animate="visible"
-        transition={{ duration: 0.8, ease: 'easeIn' }}
-        variants={variants}
-        style={{ position: 'relative' }}
-      >
-        <Box
-          minW={'100%'}
-          minH={'3px'}
-          bg={'blue.500'}
-          // position={'relative'}
-          // className="animate"
-          // left={0}
-        ></Box>
-      </motion.div>
+        initial={{ scaleX: 0 }}
+        animate={{ scaleX: 1 }}
+        transition={{ duration: 0.8, ease: 'easeOut', delay: 0.2 }}
+        style={{ 
+          transformOrigin: 'left',
+          height: '2px',
+          background: 'linear-gradient(90deg, #3182CE, #805AD5)',
+        }}
+      />
     </Box>
   );
 };

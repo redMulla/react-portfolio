@@ -1,62 +1,113 @@
-import { Box, Heading, Image, Text, useColorModeValue } from '@chakra-ui/react';
+import { Box, Text, useColorModeValue, Avatar, VStack, HStack, Icon } from '@chakra-ui/react';
 import React from 'react';
-import 'react-loading-skeleton/dist/skeleton.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faStar as faStarSolid } from '@fortawesome/free-solid-svg-icons';
 import { faStar as faStarRegular } from '@fortawesome/free-regular-svg-icons';
+import { faQuoteLeft } from '@fortawesome/free-solid-svg-icons';
 
-export const CardTestimonials = () => {
+interface TestimonialProps {
+  name: string;
+  role: string;
+  content: string;
+  avatar: string;
+  rating: number;
+}
+
+export const CardTestimonials: React.FC<TestimonialProps> = ({ 
+  name, 
+  role, 
+  content, 
+  avatar, 
+  rating 
+}) => {
+  const bgColor = useColorModeValue('white', 'gray.800');
+  const borderColor = useColorModeValue('gray.200', 'gray.600');
+  const textColor = useColorModeValue('gray.600', 'gray.300');
+  const nameColor = useColorModeValue('gray.800', 'white');
+  
+  const renderStars = () => {
+    const stars = [];
+    for (let i = 1; i <= 5; i++) {
+      stars.push(
+        <FontAwesomeIcon
+          key={i}
+          icon={i <= rating ? faStarSolid : faStarRegular}
+          color="#FFD700"
+          size="sm"
+        />
+      );
+    }
+    return stars;
+  };
+
   return (
     <Box
-      w={{ sm: 'sm' }}
-      bg={useColorModeValue('gray.100', 'black')}
-      border={'4px solid'}
-      position={'relative'}
-      borderRadius={'15px'}
-      borderColor={'green'}
-      display={'flex'}
-      flexDir={'column'}
-      alignSelf={'center'}
-      justifyContent={'center'}
-      alignItems={'center'}
-      paddingTop={'3'}
-      paddingBottom={'3'}
+      maxW="sm"
+      w="full"
+      bg={bgColor}
+      boxShadow="xl"
+      rounded="xl"
+      p={6}
+      position="relative"
+      border="1px solid"
+      borderColor={borderColor}
+      transition="all 0.3s ease"
+      _hover={{
+        transform: 'translateY(-4px)',
+        boxShadow: '2xl',
+      }}
     >
-      {/* Avatar */}
-      <Box
-        height={'80px'}
-        width={'80px'}
-        minW={'60px'}
-        borderRadius={'50%'}
-        overflow={'hidden'}
-        margin={'3'}
-        border={'1px solid'}
-      >
-        {/* <Skeleton height={'60px'} width={'100%'} count={6}/> */}
-        <Image src="https://images.pexels.com/photos/6618822/pexels-photo-6618822.jpeg" />
+      {/* Quote Icon */}
+      <Box position="absolute" top={4} left={4} opacity={0.1}>
+        <FontAwesomeIcon icon={faQuoteLeft} size="2x" />
       </Box>
-      <Heading margin={'5'} fontSize={'md'} fontWeight={'500'}>
-        Ibinkwiye Vassilly delivered a fantastic full-stack web service for us.
-        They were responsive, efficient, and the final product is excellent.
-        Highly recommend!"
-      </Heading>
-      <Text justifySelf={'center'} textColor={'GrayText'} mb={'3'}>
-        - John Doe
-      </Text>
-      <Box
-        position={'absolute'}
-        bottom={'-13px'}
-        bg={'var(--chakra-colors-chakra-body-bg)'}
-        px={'2'}
-        borderRadius={'10px'}
-        border={'2px'}
-      >
-        <FontAwesomeIcon icon={faStarSolid} />
-        <FontAwesomeIcon icon={faStarSolid} />
-        <FontAwesomeIcon icon={faStarSolid} />
-        <FontAwesomeIcon icon={faStarSolid} />
-        <FontAwesomeIcon icon={faStarRegular} />
-      </Box>
+
+      <VStack spacing={4} align="center">
+        {/* Avatar */}
+        <Avatar
+          size="lg"
+          src={avatar}
+          name={name}
+          border="3px solid"
+          borderColor="blue.500"
+        />
+
+        {/* Content */}
+        <Text
+          fontSize="md"
+          textAlign="center"
+          color={textColor}
+          fontStyle="italic"
+          lineHeight="1.6"
+          px={2}
+        >
+          "{content}"
+        </Text>
+
+        {/* Name and Role */}
+        <VStack spacing={1}>
+          <Text
+            fontSize="lg"
+            fontWeight="bold"
+            color={nameColor}
+            textAlign="center"
+          >
+            {name}
+          </Text>
+          <Text
+            fontSize="sm"
+            color={textColor}
+            textAlign="center"
+          >
+            {role}
+          </Text>
+        </VStack>
+
+        {/* Rating */}
+        <HStack spacing={1}>
+          {renderStars()}
+        </HStack>
+      </VStack>
     </Box>
   );
 };
