@@ -45,8 +45,8 @@ export const Hero = () => {
   }, []);
 
   return (
-    <Box 
-      minH="100vh" 
+    <Box
+      minH="100vh"
       bgGradient={bgGradient}
       pt={{ base: 20, md: 24 }}
       pb={{ base: 16, md: 20 }}
@@ -77,7 +77,7 @@ export const Hero = () => {
         filter="blur(30px)"
       />
 
-      <Container maxW="container.xl" h="full">
+      <Container maxW="container.2xl" h="full">
         <Grid
           templateColumns={{ base: '1fr', lg: '1fr 1fr' }}
           gap={{ base: 8, lg: 12 }}
@@ -121,8 +121,8 @@ export const Hero = () => {
 
               <Fade direction="up" triggerOnce={true} delay={400}>
                 <Box>
-                  <Text 
-                    fontSize={{ base: 'xl', md: '2xl', lg: '3xl' }} 
+                  <Text
+                    fontSize={{ base: 'xl', md: '2xl', lg: '3xl' }}
                     color={useColorModeValue('gray.700', 'gray.200')}
                     fontWeight="medium"
                     minH={{ base: '60px', md: '80px' }}
@@ -145,7 +145,7 @@ export const Hero = () => {
                   maxW="600px"
                   lineHeight="relaxed"
                 >
-                  Crafting modern, scalable web applications with cutting-edge technologies. 
+                  Crafting modern, scalable web applications with cutting-edge technologies.
                   From concept to deployment, I deliver exceptional digital experiences.
                 </Text>
               </Fade>
