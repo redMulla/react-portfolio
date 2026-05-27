@@ -1,4 +1,11 @@
-import { Box, Text, useColorModeValue, Avatar, VStack, HStack, Icon } from '@chakra-ui/react';
+import {
+  Box,
+  Text,
+  useColorModeValue,
+  Avatar,
+  VStack,
+  HStack,
+} from '@chakra-ui/react';
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faStar as faStarSolid } from '@fortawesome/free-solid-svg-icons';
@@ -13,18 +20,18 @@ interface TestimonialProps {
   rating: number;
 }
 
-export const CardTestimonials: React.FC<TestimonialProps> = ({ 
-  name, 
-  role, 
-  content, 
-  avatar, 
-  rating 
+export const CardTestimonials: React.FC<TestimonialProps> = ({
+  name,
+  role,
+  content,
+  avatar,
+  rating,
 }) => {
   const bgColor = useColorModeValue('white', 'gray.800');
   const borderColor = useColorModeValue('gray.200', 'gray.600');
   const textColor = useColorModeValue('gray.600', 'gray.300');
   const nameColor = useColorModeValue('gray.800', 'white');
-  
+
   const renderStars = () => {
     const stars = [];
     for (let i = 1; i <= 5; i++) {
@@ -94,19 +101,13 @@ export const CardTestimonials: React.FC<TestimonialProps> = ({
           >
             {name}
           </Text>
-          <Text
-            fontSize="sm"
-            color={textColor}
-            textAlign="center"
-          >
+          <Text fontSize="sm" color={textColor} textAlign="center">
             {role}
           </Text>
         </VStack>
 
         {/* Rating */}
-        <HStack spacing={1}>
-          {renderStars()}
-        </HStack>
+        <HStack spacing={1}>{renderStars()}</HStack>
       </VStack>
     </Box>
   );

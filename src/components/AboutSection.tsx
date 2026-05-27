@@ -5,7 +5,6 @@ import {
   Grid,
   GridItem,
   Heading,
-  Image,
   Link,
   Text,
   VStack,
