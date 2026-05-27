@@ -19,10 +19,10 @@ import { motion } from 'framer-motion';
 
 export const Hero = () => {
   const el = useRef(null);
-  const bgGradient = useColorModeValue(
-    'linear(to-br, blue.50, purple.50, pink.50)',
-    'linear(to-br, gray.900, blue.900, purple.900)'
-  );
+  // const bgGradient = useColorModeValue(
+  //   'linear(to-br, blue.50, purple.50, pink.50)',
+  //   'linear(to-br, gray.900, blue.900, purple.900)'
+  // );
 
   useEffect(() => {
     const typed = new Typed(el.current, {
@@ -47,7 +47,6 @@ export const Hero = () => {
   return (
     <Box
       minH="100vh"
-      bgGradient={bgGradient}
       pt={{ base: 20, md: 24 }}
       pb={{ base: 16, md: 20 }}
       position="relative"
@@ -76,149 +75,162 @@ export const Hero = () => {
         borderRadius="full"
         filter="blur(30px)"
       />
-
-      <Container maxW="container.2xl" h="full">
-        <Grid
-          templateColumns={{ base: '1fr', lg: '1fr 1fr' }}
-          gap={{ base: 8, lg: 12 }}
-          alignItems="center"
-          minH="80vh"
-        >
-          {/* Content Section */}
-          <GridItem>
-            <VStack spacing={6} align={{ base: 'center', lg: 'start' }} textAlign={{ base: 'center', lg: 'left' }}>
-              <Fade direction="up" triggerOnce={true} delay={100}>
-                <Text
-                  fontSize={{ base: 'lg', md: 'xl' }}
-                  color={useColorModeValue('gray.600', 'gray.300')}
-                  fontWeight="medium"
-                  letterSpacing="wide"
-                  textTransform="uppercase"
-                >
-                  Full-Stack Developer
-                </Text>
-              </Fade>
-
-              <Zoom fraction={0.3} triggerOnce={true} delay={200}>
-                <Heading
-                  as="h1"
-                  size={{ base: '2xl', md: '3xl', lg: '4xl' }}
-                  lineHeight="shorter"
-                  fontWeight="bold"
-                >
-                  <Text as="span" color={useColorModeValue('gray.800', 'white')}>
-                    Hi, I'm{' '}
-                  </Text>
+      <div>
+        <Container maxW="container.2xl" h="full">
+          <Grid
+            templateColumns={{ base: '1fr', lg: '1fr 1fr' }}
+            gap={{ base: 8, lg: 12 }}
+            alignItems="center"
+            minH="80vh"
+          >
+            {/* Content Section */}
+            <GridItem>
+              <VStack
+                spacing={6}
+                align={{ base: 'center', lg: 'start' }}
+                textAlign={{ base: 'center', lg: 'left' }}
+              >
+                <Fade direction="up" triggerOnce={true} delay={100}>
                   <Text
-                    as="span"
-                    bgGradient="linear(to-r, blue.400, purple.500, pink.400)"
-                    bgClip="text"
-                  >
-                    Vassilly Ibinkwiye
-                  </Text>
-                </Heading>
-              </Zoom>
-
-              <Fade direction="up" triggerOnce={true} delay={400}>
-                <Box>
-                  <Text
-                    fontSize={{ base: 'xl', md: '2xl', lg: '3xl' }}
-                    color={useColorModeValue('gray.700', 'gray.200')}
+                    fontSize={{ base: 'lg', md: 'xl' }}
+                    color={useColorModeValue('gray.600', 'gray.300')}
                     fontWeight="medium"
-                    minH={{ base: '60px', md: '80px' }}
+                    letterSpacing="wide"
+                    textTransform="uppercase"
                   >
-                    I transform{' '}
+                    Full-Stack Developer
+                  </Text>
+                </Fade>
+
+                <Zoom fraction={0.3} triggerOnce={true} delay={200}>
+                  <Heading
+                    as="h1"
+                    size={{ base: '2xl', md: '3xl', lg: '4xl' }}
+                    lineHeight="shorter"
+                    fontWeight="bold"
+                  >
                     <Text
                       as="span"
-                      color="blue.500"
-                      fontWeight="bold"
-                      ref={el}
-                    />
+                      color={useColorModeValue('gray.800', 'white')}
+                    >
+                      Hi, I'm{' '}
+                    </Text>
+                    <Text
+                      as="span"
+                      bgGradient="linear(to-r, blue.400, purple.500, pink.400)"
+                      bgClip="text"
+                    >
+                      Vassilly Ibinkwiye
+                    </Text>
+                  </Heading>
+                </Zoom>
+
+                <Fade direction="up" triggerOnce={true} delay={400}>
+                  <Box>
+                    <Text
+                      fontSize={{ base: 'xl', md: '2xl', lg: '3xl' }}
+                      color={useColorModeValue('gray.700', 'gray.200')}
+                      fontWeight="medium"
+                      minH={{ base: '60px', md: '80px' }}
+                    >
+                      I transform{' '}
+                      <Text
+                        as="span"
+                        color="blue.500"
+                        fontWeight="bold"
+                        ref={el}
+                      />
+                    </Text>
+                  </Box>
+                </Fade>
+
+                <Fade direction="up" triggerOnce={true} delay={600}>
+                  <Text
+                    fontSize={{ base: 'lg', md: 'xl' }}
+                    color={useColorModeValue('gray.600', 'gray.300')}
+                    maxW="600px"
+                    lineHeight="relaxed"
+                  >
+                    Crafting modern, scalable web applications with cutting-edge
+                    technologies. From concept to deployment, I deliver
+                    exceptional digital experiences.
                   </Text>
-                </Box>
-              </Fade>
+                </Fade>
 
-              <Fade direction="up" triggerOnce={true} delay={600}>
-                <Text
-                  fontSize={{ base: 'lg', md: 'xl' }}
-                  color={useColorModeValue('gray.600', 'gray.300')}
-                  maxW="600px"
-                  lineHeight="relaxed"
-                >
-                  Crafting modern, scalable web applications with cutting-edge technologies.
-                  From concept to deployment, I deliver exceptional digital experiences.
-                </Text>
-              </Fade>
+                <Fade direction="up" triggerOnce={true} delay={800}>
+                  <HStack spacing={4} pt={4}>
+                    <Button
+                      size="lg"
+                      bgGradient="linear(to-r, blue.400, purple.500)"
+                      color="white"
+                      _hover={{
+                        bgGradient: 'linear(to-r, blue.500, purple.600)',
+                        transform: 'translateY(-2px)',
+                        boxShadow: 'xl',
+                      }}
+                      transition="all 0.3s ease"
+                      rounded="full"
+                      px={8}
+                    >
+                      View My Work
+                    </Button>
+                    <Button
+                      size="lg"
+                      variant="outline"
+                      borderColor="blue.400"
+                      color="blue.400"
+                      _hover={{
+                        bg: 'blue.50',
+                        transform: 'translateY(-2px)',
+                      }}
+                      transition="all 0.3s ease"
+                      rounded="full"
+                      px={8}
+                    >
+                      Get In Touch
+                    </Button>
+                  </HStack>
+                </Fade>
+              </VStack>
+            </GridItem>
 
-              <Fade direction="up" triggerOnce={true} delay={800}>
-                <HStack spacing={4} pt={4}>
-                  <Button
-                    size="lg"
-                    bgGradient="linear(to-r, blue.400, purple.500)"
-                    color="white"
-                    _hover={{
-                      bgGradient: 'linear(to-r, blue.500, purple.600)',
-                      transform: 'translateY(-2px)',
-                      boxShadow: 'xl',
-                    }}
-                    transition="all 0.3s ease"
-                    rounded="full"
-                    px={8}
-                  >
-                    View My Work
-                  </Button>
-                  <Button
-                    size="lg"
-                    variant="outline"
-                    borderColor="blue.400"
-                    color="blue.400"
-                    _hover={{
-                      bg: 'blue.50',
-                      transform: 'translateY(-2px)',
-                    }}
-                    transition="all 0.3s ease"
-                    rounded="full"
-                    px={8}
-                  >
-                    Get In Touch
-                  </Button>
-                </HStack>
-              </Fade>
-            </VStack>
-          </GridItem>
-
-          {/* Animation Section */}
-          <GridItem display="flex" justifyContent="center" alignItems="center">
-            <motion.div
-              initial={{ opacity: 0, scale: 0.8 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.8, delay: 0.3 }}
+            {/* Animation Section */}
+            <GridItem
+              display="flex"
+              justifyContent="center"
+              alignItems="center"
             >
-              <Box
-                maxW={{ base: '300px', md: '400px', lg: '500px' }}
-                w="full"
-                position="relative"
+              <motion.div
+                initial={{ opacity: 0, scale: 0.8 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.8, delay: 0.3 }}
               >
                 <Box
-                  position="absolute"
-                  inset={0}
-                  bgGradient="radial(circle, blue.200, transparent)"
-                  opacity={0.3}
-                  borderRadius="full"
-                  filter="blur(20px)"
-                  transform="scale(1.2)"
-                />
-                <Lottie
-                  animationData={animationData}
-                  loop={true}
-                  autoplay={true}
-                  rendererSettings={{ preserveAspectRatio: 'xMidYMid meet' }}
-                />
-              </Box>
-            </motion.div>
-          </GridItem>
-        </Grid>
-      </Container>
+                  maxW={{ base: '300px', md: '400px', lg: '500px' }}
+                  w="full"
+                  position="relative"
+                >
+                  <Box
+                    position="absolute"
+                    inset={0}
+                    bgGradient="radial(circle, blue.200, transparent)"
+                    opacity={0.3}
+                    borderRadius="full"
+                    filter="blur(20px)"
+                    transform="scale(1.2)"
+                  />
+                  <Lottie
+                    animationData={animationData}
+                    loop={true}
+                    autoplay={true}
+                    rendererSettings={{ preserveAspectRatio: 'xMidYMid meet' }}
+                  />
+                </Box>
+              </motion.div>
+            </GridItem>
+          </Grid>
+        </Container>
+      </div>
     </Box>
   );
 };

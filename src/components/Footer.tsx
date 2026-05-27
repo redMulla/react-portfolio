@@ -29,7 +29,11 @@ import {
   faLinkedin,
   faTwitter,
 } from '@fortawesome/free-brands-svg-icons';
-import { faEnvelope, faPhone, faMapMarkerAlt } from '@fortawesome/free-solid-svg-icons';
+import {
+  faEnvelope,
+  faPhone,
+  faMapMarkerAlt,
+} from '@fortawesome/free-solid-svg-icons';
 
 const ContactForm = () => {
   const toast = useToast();
@@ -101,54 +105,54 @@ const ContactForm = () => {
   const socialLinks = [
     {
       icon: faInstagram,
-      href: "https://www.instagram.com/red_vassily/",
-      label: "Instagram",
-      color: "#E4405F"
+      href: 'https://www.instagram.com/red_vassily/',
+      label: 'Instagram',
+      color: '#E4405F',
     },
     {
       icon: faTwitter,
-      href: "https://x.com/Vassilly3",
-      label: "Twitter",
-      color: "#1DA1F2"
+      href: 'https://x.com/Vassilly3',
+      label: 'Twitter',
+      color: '#1DA1F2',
     },
     {
       icon: faLinkedin,
-      href: "https://www.linkedin.com/in/vassilly-red-v-ibinkwiye-3884131b9",
-      label: "LinkedIn",
-      color: "#0077B5"
+      href: 'https://www.linkedin.com/in/vassilly-red-v-ibinkwiye-3884131b9',
+      label: 'LinkedIn',
+      color: '#0077B5',
     },
     {
       icon: faGithub,
-      href: "https://github.com/redMulla",
-      label: "GitHub",
-      color: "#fff"
-    }
+      href: 'https://github.com/redMulla',
+      label: 'GitHub',
+      color: '#fff',
+    },
   ];
 
   const contactInfo = [
     {
       icon: faEnvelope,
-      label: "Email",
-      value: "ivassillycharite@gmail.com",
-      href: "mailto:ivassillycharite@gmail.com"
+      label: 'Email',
+      value: 'ivassillycharite@gmail.com',
+      href: 'mailto:ivassillycharite@gmail.com',
     },
     {
       icon: faPhone,
-      label: "Phone",
-      value: "+971 50 493 0652",
-      href: "tel:+971504930652"
+      label: 'Phone',
+      value: '+971 50 493 0652',
+      href: 'tel:+971504930652',
     },
     {
       icon: faMapMarkerAlt,
-      label: "Location",
-      value: "Dubai, UAE",
-      href: "#"
-    }
+      label: 'Location',
+      value: 'Dubai, UAE',
+      href: '#',
+    },
   ];
 
   return (
-    <Box 
-      as="footer" 
+    <Box
+      as="footer"
       bgGradient={bgGradient}
       color="white"
       position="relative"
@@ -178,7 +182,11 @@ const ContactForm = () => {
         filter="blur(40px)"
       />
 
-      <Container maxW="container.2xl" py={{ base: 16, md: 20 }} px={{base: 2, sm: 5, md: 10, lg: 14, xl: 20}}>
+      <Container
+        maxW="container.2xl"
+        py={{ base: 16, md: 20 }}
+        px={{ base: 2, sm: 5, md: 10, lg: 14, xl: 20 }}
+      >
         <VStack spacing={16}>
           {/* Section Header */}
           <Fade direction="up" triggerOnce={true}>
@@ -196,7 +204,8 @@ const ContactForm = () => {
                 color={textColor}
                 maxW="600px"
               >
-                Ready to bring your ideas to life? Let's discuss your next project
+                Ready to bring your ideas to life? Let's discuss your next
+                project
               </Text>
             </VStack>
           </Fade>
@@ -216,8 +225,8 @@ const ContactForm = () => {
                       Get In Touch
                     </Heading>
                     <Text color={textColor} fontSize="lg" lineHeight="1.8">
-                      I'm always open to discussing new opportunities, 
-                      creative projects, or just having a friendly chat about technology.
+                      I'm always open to discussing new opportunities, creative
+                      projects, or just having a friendly chat about technology.
                     </Text>
                   </Box>
 
@@ -230,7 +239,12 @@ const ContactForm = () => {
                         transition={{ duration: 0.2 }}
                       >
                         <Link href={contact.href} isExternal>
-                          <HStack spacing={4} p={3} rounded="lg" _hover={{ bg: 'whiteAlpha.100' }}>
+                          <HStack
+                            spacing={4}
+                            p={3}
+                            rounded="lg"
+                            _hover={{ bg: 'whiteAlpha.100' }}
+                          >
                             <Box
                               w={10}
                               h={10}
@@ -258,7 +272,12 @@ const ContactForm = () => {
 
                   {/* Social Links */}
                   <Box>
-                    <Text color={textColor} mb={4} fontSize="lg" fontWeight="medium">
+                    <Text
+                      color={textColor}
+                      mb={4}
+                      fontSize="lg"
+                      fontWeight="medium"
+                    >
                       Follow Me
                     </Text>
                     <HStack spacing={4}>

@@ -36,46 +36,46 @@ const AboutSection = () => {
   const cardBg = useColorModeValue('white', 'gray.700');
   const textColor = useColorModeValue('gray.600', 'gray.300');
   const headingColor = useColorModeValue('gray.800', 'white');
-  const githubColor = useColorModeValue("#333", "#fff");
+  const githubColor = useColorModeValue('#333', '#fff');
   const socialHoverBg = useColorModeValue('gray.100', 'gray.600');
   const borderColor = useColorModeValue('gray.200', 'gray.600');
-  
+
   const socialLinks = [
     {
       icon: faInstagram,
-      href: "https://www.instagram.com/red_vassily/",
-      label: "Instagram",
-      color: "#E4405F"
+      href: 'https://www.instagram.com/red_vassily/',
+      label: 'Instagram',
+      color: '#E4405F',
     },
     {
       icon: faTwitter,
-      href: "https://x.com/Vassilly3",
-      label: "Twitter",
-      color: "#1DA1F2"
+      href: 'https://x.com/Vassilly3',
+      label: 'Twitter',
+      color: '#1DA1F2',
     },
     {
       icon: faLinkedin,
-      href: "https://www.linkedin.com/in/vassilly-red-v-ibinkwiye-3884131b9",
-      label: "LinkedIn",
-      color: "#0077B5"
+      href: 'https://www.linkedin.com/in/vassilly-red-v-ibinkwiye-3884131b9',
+      label: 'LinkedIn',
+      color: '#0077B5',
     },
     {
       icon: faGithub,
-      href: "https://github.com/redMulla",
-      label: "GitHub",
-      color: githubColor
-    }
+      href: 'https://github.com/redMulla',
+      label: 'GitHub',
+      color: githubColor,
+    },
   ];
 
   const stats = [
-    { label: "Years Experience", value: "3+" },
-    { label: "Projects Completed", value: "15+" },
-    { label: "Technologies", value: "10+" },
-    { label: "Happy Clients", value: "20+" }
+    { label: 'Years Experience', value: '3+' },
+    { label: 'Projects Completed', value: '15+' },
+    { label: 'Technologies', value: '10+' },
+    { label: 'Happy Clients', value: '20+' },
   ];
 
   return (
-    <Box 
+    <Box
       bgGradient={bgGradient}
       py={{ base: 16, md: 20 }}
       position="relative"
@@ -93,7 +93,7 @@ const AboutSection = () => {
         borderRadius="full"
         filter="blur(40px)"
       />
-      
+
       <Container maxW="container.xl">
         <VStack spacing={16}>
           {/* Section Header */}
@@ -146,8 +146,8 @@ const AboutSection = () => {
                       border="4px solid"
                       borderColor="blue.500"
                       boxShadow="xl"
-                      w={{ base: "200px", md: "250px" }}
-                      h={{ base: "200px", md: "250px" }}
+                      w={{ base: '200px', md: '250px' }}
+                      h={{ base: '200px', md: '250px' }}
                     />
                   </Box>
 
@@ -199,10 +199,7 @@ const AboutSection = () => {
                           >
                             {stat.value}
                           </StatNumber>
-                          <StatLabel
-                            fontSize="sm"
-                            color={textColor}
-                          >
+                          <StatLabel fontSize="sm" color={textColor}>
                             {stat.label}
                           </StatLabel>
                         </Stat>
@@ -218,11 +215,7 @@ const AboutSection = () => {
               <Fade direction="right" triggerOnce={true} delay={400}>
                 <VStack spacing={6} align="start" textAlign="left">
                   <Box>
-                    <Heading
-                      size="lg"
-                      color={headingColor}
-                      mb={4}
-                    >
+                    <Heading size="lg" color={headingColor} mb={4}>
                       Hi there! I'm{' '}
                       <Text as="span" color="blue.500">
                         Vassilly Ibinkwiye
@@ -234,20 +227,17 @@ const AboutSection = () => {
                       lineHeight="1.8"
                     >
                       A 30-year-old Full-Stack web developer with three years of
-                      hands-on experience crafting seamless digital experiences. I
-                      thrive on challenges, viewing each project as an opportunity to
-                      learn and innovate. My journey in web development has taught me
-                      the importance of blending functionality with creativity, and I
-                      love transforming complex problems into elegant solutions.
+                      hands-on experience crafting seamless digital experiences.
+                      I thrive on challenges, viewing each project as an
+                      opportunity to learn and innovate. My journey in web
+                      development has taught me the importance of blending
+                      functionality with creativity, and I love transforming
+                      complex problems into elegant solutions.
                     </Text>
                   </Box>
 
                   <Box>
-                    <Heading
-                      size="md"
-                      color={headingColor}
-                      mb={3}
-                    >
+                    <Heading size="md" color={headingColor} mb={3}>
                       Beyond the Code
                     </Heading>
                     <Text
@@ -255,20 +245,17 @@ const AboutSection = () => {
                       color={textColor}
                       lineHeight="1.8"
                     >
-                      Beyond coding, I have a deep passion for music. Whether I'm
-                      jamming on my instrument or diving into a new playlist, music
-                      fuels my creativity and inspires my work. I believe that the
-                      rhythm and harmony found in music parallel the art of web
-                      design—both require balance, creativity, and a touch of intuition.
+                      Beyond coding, I have a deep passion for music. Whether
+                      I'm jamming on my instrument or diving into a new
+                      playlist, music fuels my creativity and inspires my work.
+                      I believe that the rhythm and harmony found in music
+                      parallel the art of web design—both require balance,
+                      creativity, and a touch of intuition.
                     </Text>
                   </Box>
 
                   <Box>
-                    <Heading
-                      size="md"
-                      color={headingColor}
-                      mb={3}
-                    >
+                    <Heading size="md" color={headingColor} mb={3}>
                       Let's Create Together
                     </Heading>
                     <Text
@@ -276,11 +263,11 @@ const AboutSection = () => {
                       color={textColor}
                       lineHeight="1.8"
                     >
-                      I'm always eager to collaborate and connect with fellow creatives
-                      and visionaries. If you're looking for someone who is not only
-                      skilled in web development but also brings a fresh perspective and
-                      a love for innovation, let's create something extraordinary
-                      together!
+                      I'm always eager to collaborate and connect with fellow
+                      creatives and visionaries. If you're looking for someone
+                      who is not only skilled in web development but also brings
+                      a fresh perspective and a love for innovation, let's
+                      create something extraordinary together!
                     </Text>
                   </Box>
                 </VStack>

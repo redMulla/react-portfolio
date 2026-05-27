@@ -17,53 +17,68 @@ import { ExternalLinkIcon } from '@chakra-ui/icons';
 // Project data for better organization
 const projectsData = [
   {
-    title: "iHela",
-    description: "Comprehensive DBS and ERP system with modern frontend architecture. Built for efficient business management and data processing.",
-    image: "./images/project.png",
-    url: "https://ihela.bi/en/",
+    title: 'iHela',
+    description:
+      'Comprehensive DBS and ERP system with modern frontend architecture. Built for efficient business management and data processing.',
+    image: './images/project.png',
+    url: 'https://ihela.bi/en/',
     technologies: [
-      { name: "Angular", color: "red" },
-      { name: "Bootstrap", color: "purple" },
-      { name: "TypeScript", color: "blue" }
+      { name: 'Angular', color: 'red' },
+      { name: 'Bootstrap', color: 'purple' },
+      { name: 'TypeScript', color: 'blue' },
     ],
-    featured: true
+    featured: true,
   },
+  // {
+  //   title: "Tiketa",
+  //   description: "Modern event and ticket management platform with real-time booking capabilities and seamless user experience.",
+  //   image: "./images/tiketa.png",
+  //   url: "https://tiketa.bi",
+  //   technologies: [
+  //     { name: "React", color: "blue" },
+  //     { name: "NodeJs", color: "green" },
+  //     { name: "Express", color: "green", variant: "outline" },
+  //     { name: "GraphQL", color: "pink" }
+  //   ]
+  // },
+  // {
+  //   title: "Ntwaza eConnect",
+  //   description: "Advanced shipment management system optimizing logistics operations for enhanced customer satisfaction and efficiency.",
+  //   image: "./images/ntwaza.png",
+  //   url: "https://ntwaza.exec.bi/",
+  //   technologies: [
+  //     { name: "React", color: "blue" },
+  //     { name: "NodeJs", color: "green" },
+  //     { name: "Express", color: "green", variant: "outline" },
+  //     { name: "GraphQL", color: "pink" }
+  //   ]
+  // },
+  // {
+  //   title: "Safi Deals",
+  //   description: "Ethical marketplace platform connecting buyers and sellers in a secure, transparent environment built on trust and integrity.",
+  //   image: "./images/safideals.png",
+  //   url: "https://safideals.com/",
+  //   technologies: [
+  //     { name: "React", color: "blue" },
+  //     { name: "NodeJs", color: "green" },
+  //     { name: "Express", color: "green", variant: "outline" },
+  //     { name: "GraphQL", color: "pink" }
+  //   ]
+  // }
   {
-    title: "Tiketa",
-    description: "Modern event and ticket management platform with real-time booking capabilities and seamless user experience.",
-    image: "./images/tiketa.png",
-    url: "https://tiketa.bi",
+    title: 'RentalGuard',
+    description:
+      'An intelligent protection platform designed to safeguard landlords and property managers by screening tenants, detecting fraud, and mitigating rental risks.',
+    image: './images/rentalguard.png',
+    url: 'https://rental-guard.vercel.app/',
     technologies: [
-      { name: "React", color: "blue" },
-      { name: "NodeJs", color: "green" },
-      { name: "Express", color: "green", variant: "outline" },
-      { name: "GraphQL", color: "pink" }
-    ]
+      { name: 'React', color: 'blue' },
+      { name: 'TailwindCSS', color: 'purple' },
+      { name: 'TypeScript', color: 'blue' },
+      { name: 'Supabase', color: 'orange' },
+    ],
+    featured: true,
   },
-  {
-    title: "Ntwaza eConnect",
-    description: "Advanced shipment management system optimizing logistics operations for enhanced customer satisfaction and efficiency.",
-    image: "./images/ntwaza.png",
-    url: "https://ntwaza.exec.bi/",
-    technologies: [
-      { name: "React", color: "blue" },
-      { name: "NodeJs", color: "green" },
-      { name: "Express", color: "green", variant: "outline" },
-      { name: "GraphQL", color: "pink" }
-    ]
-  },
-  {
-    title: "Safi Deals",
-    description: "Ethical marketplace platform connecting buyers and sellers in a secure, transparent environment built on trust and integrity.",
-    image: "./images/safideals.png",
-    url: "https://safideals.com/",
-    technologies: [
-      { name: "React", color: "blue" },
-      { name: "NodeJs", color: "green" },
-      { name: "Express", color: "green", variant: "outline" },
-      { name: "GraphQL", color: "pink" }
-    ]
-  }
 ];
 
 export const Projects = () => {
@@ -116,7 +131,8 @@ export const Projects = () => {
                 maxW="600px"
               >
                 A showcase of my recent work in full-stack development,
-                featuring modern web applications built with cutting-edge technologies.
+                featuring modern web applications built with cutting-edge
+                technologies.
               </Text>
             </VStack>
           </Fade>
@@ -130,7 +146,12 @@ export const Projects = () => {
               gap={{ base: 6, md: 8 }}
             >
               {projectsData.map((project, index) => (
-                <Fade key={index} direction="up" triggerOnce={true} delay={index * 100}>
+                <Fade
+                  key={index}
+                  direction="up"
+                  triggerOnce={true}
+                  delay={index * 100}
+                >
                   <motion.div
                     whileHover={{ y: -8 }}
                     transition={{ duration: 0.3 }}
@@ -222,7 +243,7 @@ export const Projects = () => {
                             {project.technologies.map((tech, techIndex) => (
                               <Badge
                                 key={techIndex}
-                                variant={"solid"}
+                                variant={'solid'}
                                 colorScheme={tech.color}
                                 rounded="full"
                                 px={3}

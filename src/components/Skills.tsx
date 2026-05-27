@@ -1,16 +1,16 @@
 import React from 'react';
-import { 
-  Box, 
-  Container, 
-  Grid, 
-  GridItem, 
-  Heading, 
-  Image, 
-  Text, 
-  VStack, 
+import {
+  Box,
+  Container,
+  Grid,
+  GridItem,
+  Heading,
+  Image,
+  Text,
+  VStack,
   useColorModeValue,
   SimpleGrid,
-  Flex
+  Flex,
 } from '@chakra-ui/react';
 import Lottie from 'lottie-react';
 import phoneAnimation from '../assets/mobile.json';
@@ -30,26 +30,29 @@ export const Skills = () => {
 
   const principles = [
     {
-      title: "Quality First",
-      description: "Meticulous attention to detail and adherence to best practices for optimal performance.",
-      icon: "🎯"
+      title: 'Quality First',
+      description:
+        'Meticulous attention to detail and adherence to best practices for optimal performance.',
+      icon: '🎯',
     },
     {
-      title: "Scalable Solutions",
-      description: "Building applications that grow with your business needs and stand the test of time.",
-      icon: "🚀"
+      title: 'Scalable Solutions',
+      description:
+        'Building applications that grow with your business needs and stand the test of time.',
+      icon: '🚀',
     },
     {
-      title: "Professional Ethics",
-      description: "Guided by integrity, transparency, and professionalism in every project.",
-      icon: "⚡"
-    }
+      title: 'Professional Ethics',
+      description:
+        'Guided by integrity, transparency, and professionalism in every project.',
+      icon: '⚡',
+    },
   ];
 
   return (
-    <Box 
+    <Box
       bgGradient={bgGradient}
-      w="100%" 
+      w="100%"
       py={{ base: 16, md: 20 }}
       position="relative"
       overflow="hidden"
@@ -98,7 +101,8 @@ export const Skills = () => {
                 maxW="700px"
                 lineHeight="relaxed"
               >
-                A foundation built on quality, integrity, and cutting-edge technology
+                A foundation built on quality, integrity, and cutting-edge
+                technology
               </Text>
             </VStack>
           </Fade>
@@ -156,8 +160,8 @@ export const Skills = () => {
                       mb={6}
                     >
                       As a Full Stack Developer, I am dedicated to delivering
-                      high-quality, scalable web applications that exceed expectations
-                      and drive business success.
+                      high-quality, scalable web applications that exceed
+                      expectations and drive business success.
                     </Text>
                   </Box>
 
@@ -187,7 +191,11 @@ export const Skills = () => {
                               <Heading size="sm" color={headingColor} mb={2}>
                                 {principle.title}
                               </Heading>
-                              <Text fontSize="sm" color={textColor} lineHeight="1.6">
+                              <Text
+                                fontSize="sm"
+                                color={textColor}
+                                lineHeight="1.6"
+                              >
                                 {principle.description}
                               </Text>
                             </Box>
@@ -235,7 +243,7 @@ export const Skills = () => {
                 Technical Skills
               </Heading>
             </Fade>
-            
+
             <Fade direction="up" triggerOnce={true} delay={1000}>
               <Box w="full">
                 <Slider />
