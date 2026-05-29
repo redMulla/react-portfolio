@@ -91,6 +91,18 @@ const projectsData = [
       { name: 'MongoDB', color: 'green' },
     ],
   },
+  {
+    title: 'Royal Cut',
+    description:
+      'A Salon website for booking appointments and services using WhatsApp.',
+    image: './images/royalcut.png',
+    url: 'https://royal-cut.vercel.app/',
+    technologies: [
+      { name: 'NextJS', color: 'gray' },
+      { name: 'TailwindCSS', color: 'purple' },
+      { name: 'TypeScript', color: 'blue' },
+    ],
+  },
 ];
 
 export const Projects = () => {
