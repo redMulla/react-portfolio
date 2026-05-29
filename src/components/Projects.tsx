@@ -77,7 +77,19 @@ const projectsData = [
       { name: 'TypeScript', color: 'blue' },
       { name: 'Supabase', color: 'orange' },
     ],
-    featured: true,
+  },
+  {
+    title: 'Tasy Bites',
+    description:
+      'A small restaurant website for whatsapp food orders and menu display.',
+    image: './images/tasybites.png',
+    url: 'https://restaurant-website-client-two.vercel.app//',
+    technologies: [
+      { name: 'NextJS', color: 'gray' },
+      { name: 'TailwindCSS', color: 'purple' },
+      { name: 'TypeScript', color: 'blue' },
+      { name: 'MongoDB', color: 'green' },
+    ],
   },
 ];
 
