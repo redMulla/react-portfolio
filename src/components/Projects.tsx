@@ -79,10 +79,10 @@ const projectsData = [
     ],
   },
   {
-    title: 'Tasy Bites',
+    title: 'Tasty Bites',
     description:
       'A small restaurant website for whatsapp food orders and menu display.',
-    image: './images/tasybites.png',
+    image: './images/tastybites.png',
     url: 'https://restaurant-website-client-two.vercel.app//',
     technologies: [
       { name: 'NextJS', color: 'gray' },
